@@ -1,0 +1,55 @@
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.13
+
+jobs:
+  deploy-dev:
+    working_directory: ~/repo
+
+    docker:
+      - image: cimg/node:12.6
+
+    steps:
+      - checkout
+
+      - run:
+          name: Installing Deployment Dependencies
+          working_directory: /
+          command: |
+            apt-get -y -qq update
+            apt-get -y install python3-pip python3-dev g++ build-essential
+            pip3 install --upgrade pip
+            apt-get remove python-pip
+            pip3 install --upgrade setuptools pytz
+            pip3 install awsebcli==3.10.0
+      - aws-cli/install
+      - aws-cli/configure
+
+      - run:
+          name: yarn install
+          command: rm yarn.lock; yarn install --network-timeout 1000000
+
+      - run:
+          name: gatsby build
+          command: npm i -g gatsby-cli; gatsby build
+
+      - run:
+          name: deploy
+          command: aws s3 sync public/ s3://cdc-eoc/ --delete
+
+      - run:
+          name: Notify Slack
+          command: |
+            curl -X POST -H 'Content-type: application/json' --data '{"text":"http://cdc-eoc.s3-website-us-east-1.amazonaws.com/"}' \
+            https://hooks.slack.com/services/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
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - deploy-dev:
+          filters:
+            branches:
+              only:
+                - master
