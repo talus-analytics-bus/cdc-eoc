@@ -83,15 +83,17 @@ const IndexPage = ({ data }) => {
       <header className={styles.header}>
         <div className={styles.text}>
           <h1>OVERVIEW</h1>
-          <h2>Who it&apos;s for and how to use this</h2>
+          {/* <h2>Who it&apos;s for and how to use this</h2> */}
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-            velit esse molestie consequat, vel illum dolore eu feugiat nulla
-            facilisis at.
+            Effectively responding to and managing the COVID-19 pandemic
+            requires close operational coordination across sectors. These
+            response efforts rely on the key principles of emergency management,
+            including coordination of efforts as typically managed by Emergency
+            Operations Centers (EOCs). This site, developed by Georgetown
+            University and the US Centers for Disease Control, provides rapid
+            access to training materials, checklists, and other resources for
+            development and strengthening of public health emergency management
+            capacities, with an emphasis on EOCs.
           </p>
         </div>
         <div className={styles.image}>
