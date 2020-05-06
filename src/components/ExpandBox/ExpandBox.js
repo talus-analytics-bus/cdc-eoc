@@ -23,6 +23,7 @@ const ExpandBox = props => {
   return (
     <section className={styles.main}>
       <button
+        aria-label={'Expand Section'}
         className={styles.firstSection}
         onClick={toggleHider}
         // style={arrowStyle}

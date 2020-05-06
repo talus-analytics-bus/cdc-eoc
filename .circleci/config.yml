@@ -30,6 +30,10 @@ jobs:
           name: yarn install
           command: rm yarn.lock; yarn install --network-timeout 1000000
 
+      - run: 
+          name: Build Library Zip
+          command: cd src/assets/documents; zip -r ../zip/EOC\ Development\ Tool.zip *;
+
       - run:
           name: gatsby build
           command: npm i -g gatsby-cli; gatsby build
