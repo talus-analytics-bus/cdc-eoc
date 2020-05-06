@@ -37,7 +37,10 @@ const Nav = () => {
         <div className={styles.navbarRight} ref={navbarRightContent}>
           <ul>
             <li>
-              <Link to="/contact/">Contact&nbsp;Us</Link>
+              <Link to="/about/">About</Link>
+              <Link to="/contact/" className={styles.button}>
+                Contact&nbsp;Us
+              </Link>
             </li>
           </ul>
         </div>

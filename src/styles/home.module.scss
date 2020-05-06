@@ -27,15 +27,15 @@
   }
 
   .text {
-    flex-basis: 60%;
+    flex-basis: 65%;
   }
 
   .image {
     margin-top: 2rem;
-    flex-basis: 40%;
+    flex-basis: 33%;
     position: relative;
     display: flex;
-    max-width: 25rem;
+    // max-width: 25rem;
 
     img {
       width: 100%;
@@ -43,11 +43,22 @@
       object-fit: contain;
     }
   }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
 }
 
 .main {
   flex-direction: column;
-  margin-bottom: 5rem;
+
+  // minimum value for quick download
+  // to be visible in IE
+  margin-top: 4rem;
 
   > header {
     flex-basis: 100%;
@@ -57,7 +68,7 @@
     margin-bottom: 1rem;
 
     .quickDownload {
-      margin-top: 1rem;
+      // margin-top: 1rem;
       margin-left: auto;
       display: flex;
       flex-direction: column;
@@ -80,6 +91,13 @@
         text-decoration: none;
         color: inherit;
 
+        // -ms-high-contrast is only supported in IE up to Edge 18
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          // this media query is necessary because IE thinks it supports
+          // background-position but it doesn't
+          background-position-x: 10rem;
+        }
+
         &:hover {
           text-decoration: underline;
         }
@@ -95,6 +113,7 @@
 
     h1 {
       text-align: left;
+      font-size: 1.2rem;
     }
 
     p {
@@ -130,6 +149,10 @@
       border-top: 1px solid #999999;
       color: inherit;
       text-decoration: none;
+      // -ms-high-contrast is only supported in IE up to Edge 18
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        padding: 32px 0;
+      }
 
       &:hover {
         text-decoration: underline;

@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
     return (
       <ExpandBox key={directory.split('/').pop()}>
         <header className={styles.expandBoxHeader}>
-          <h1>{sectionName}</h1>
+          <h1>{sectionName.replace(/[1-9] - /g, '')}</h1>
           <p>
             ({documents.length} files, {zip.prettySize})
           </p>

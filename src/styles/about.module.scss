@@ -1,0 +1,25 @@
+.header,
+.main {
+  margin: auto;
+  width: 90%;
+  max-width: 50rem;
+  margin-top: 3rem;
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+
+  p {
+    margin-top: 1em;
+  }
+}
+
+.main {
+  margin-top: 2rem;
+}

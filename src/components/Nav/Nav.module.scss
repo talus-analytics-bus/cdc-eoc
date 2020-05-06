@@ -172,15 +172,26 @@ nav a {
   color: inherit;
   font-weight: 500;
   padding: 0.4rem 0.75rem 0.5rem 0.75rem;
-  color: white;
-  border-radius: 3px;
-  transition: 0.25s background-color ease;
-  background-color: #041e42;
+  margin-left: 0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-nav a:hover {
-  background-color: #041e42c0;
-  transition: 0.25s background-color ease;
+.navbarRight {
+  .button {
+    color: white;
+    border-radius: 3px;
+    transition: 0.25s background-color ease;
+    background-color: #041e42;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #041e42c0;
+      transition: 0.25s background-color ease;
+    }
+  }
 }
 
 nav > a {
@@ -189,6 +200,7 @@ nav > a {
 }
 
 nav > a:hover {
+  text-decoration: none;
   background-color: rgba(64, 147, 133, 0);
   transition: 0.25s background-color ease;
 }
