@@ -37,7 +37,7 @@ jobs:
 
       - run: 
           name: Build Library Zip
-          command: cd src/assets/documents; zip -r ../zip/EOC\ Development\ Tool.zip *;
+          command: cd src/assets/documents; mkdir ../zip; zip -r ../zip/EOC\ Development\ Tool.zip *;
 
       - run:
           name: gatsby build
