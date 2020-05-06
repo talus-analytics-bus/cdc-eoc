@@ -13,11 +13,6 @@ jobs:
     steps:
       - checkout
 
-      - run: 
-          name: ls
-          command: cd src/assets/;ls -al;
-
-
       - run:
           name: Installing Deployment Dependencies
           working_directory: /
@@ -37,7 +32,17 @@ jobs:
 
       - run: 
           name: Build Library Zip
-          command: cd src/assets/documents; mkdir ../zip; zip -r ../zip/EOC\ Development\ Tool.zip *;
+          command: |
+            cd src/assets/documents
+            mkdir ../zip
+            zip -r ../zip/EOC\ Development\ Tool.zip *;
+
+      - run:
+          name: Build Subdirectory Zips
+          command: |
+            cd src/assets/documents/EOC\ Development\ Tool;
+            for i in */; do zip -r "../../zip/${i%/}.zip" "$i"; done
+
 
       - run:
           name: gatsby build

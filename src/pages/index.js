@@ -13,6 +13,10 @@ const IndexPage = ({ data }) => {
     ...new Set(data.allFile.nodes.map(node => node.relativeDirectory)),
   ].filter(dir => dir !== 'zip')
 
+  const zipfiles = data.allFile.nodes.filter(
+    node => node.relativeDirectory === 'zip'
+  )
+
   directories.sort((a, b) => a.localeCompare(b))
 
   const createDocElements = documents =>
@@ -36,9 +40,6 @@ const IndexPage = ({ data }) => {
           {document.ext}
         </p>
         <p className={styles.size}>{document.prettySize}</p>
-        {/* <a href={document.publicURL}>download</a> */}
-
-        {/* <p>{document.ext}</p> */}
       </a>
     ))
 
@@ -46,14 +47,17 @@ const IndexPage = ({ data }) => {
     const documents = data.allFile.nodes.filter(
       node => node.relativeDirectory === directory
     )
-
+    const sectionName = directory.split('/').pop()
+    const zip = zipfiles.find(zip => zip.name === sectionName)
     return (
       <ExpandBox key={directory.split('/').pop()}>
         <header className={styles.expandBoxHeader}>
-          <h1>{directory.split('/').pop()}</h1>
-          <p>({documents.length} files)</p>
+          <h1>{sectionName}</h1>
+          <p>
+            ({documents.length} files, {zip.prettySize})
+          </p>
           <a
-            href="#"
+            href={zip.publicURL}
             aria-label="Download Zip File"
             onClick={e => {
               e.stopPropagation()
@@ -67,9 +71,11 @@ const IndexPage = ({ data }) => {
     )
   })
 
-  const zip = data.allFile.nodes.filter(
-    node => node.relativeDirectory === 'zip'
-  )[0]
+  const libraryZip = data.allFile.nodes.find(
+    node =>
+      (node.relativeDirectory === 'zip') &
+      (node.name === 'EOC Development Tool')
+  )
 
   return (
     <Layout>
@@ -100,9 +106,9 @@ const IndexPage = ({ data }) => {
           <h1>EOC GUIDANCE LIBRARY</h1>
           <div className={styles.quickDownload}>
             <p>Quick download</p>
-            <a href={zip.publicURL}>
+            <a href={libraryZip.publicURL}>
               Complete Library ({data.allFile.totalCount} files,{' '}
-              {zip.prettySize} .zip)
+              {libraryZip.prettySize} .zip)
             </a>
           </div>
         </header>
