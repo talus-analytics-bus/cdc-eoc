@@ -13,6 +13,11 @@ jobs:
     steps:
       - checkout
 
+      - run: 
+          name: ls
+          command: cd src/assets/;ls -al;
+
+
       - run:
           name: Installing Deployment Dependencies
           working_directory: /
