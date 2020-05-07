@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="CDC EOC Resource Portal" />
+      <SEO title="EOC Resource Portal" />
       <header className={styles.header}>
         <div className={styles.text}>
           <h1>OVERVIEW</h1>

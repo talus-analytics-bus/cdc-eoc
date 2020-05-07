@@ -53,6 +53,17 @@ jobs:
           command: aws s3 sync public/ s3://cdc-eoc/ --delete
 
       - run:
+          name: invalidate index.html
+          command: |
+            aws cloudfront create-invalidation \
+            --distribution-id E1M82XI9UK5PMB \
+            --paths \
+            "/index.html" \
+            "/about/index.html" \
+            "/" \
+            "/about/"
+
+      - run:
           name: Notify Slack
           command: |
             curl -X POST -H 'Content-type: application/json' --data '{"text":"http://cdc-eoc.s3-website-us-east-1.amazonaws.com/"}' \

@@ -11,8 +11,8 @@ const aboutPage = () => {
   return (
     <Layout>
       <SEO
-        title="About The CDC EOC Resource Portal"
-        description="Description, background, and acknowledgements for the CDC EOC website"
+        title="About The EOC Resource Portal"
+        description="Description, background, and acknowledgements for the EOC website"
         lang="en"
       />
       <header className={styles.header}>
@@ -57,8 +57,6 @@ const aboutPage = () => {
           and other resources for development and strengthening of public health
           emergency management capacities, with an emphasis on EOCs.
         </p>
-      </article>
-      <article className={styles.main}>
         <h1>Acknowledgements</h1>
         <p>
           This effort was completed by Georgetown University Center for Global
@@ -66,6 +64,7 @@ const aboutPage = () => {
           funded by the CDC Foundation.
         </p>
       </article>
+      <article className={styles.main}></article>
     </Layout>
   )
 }

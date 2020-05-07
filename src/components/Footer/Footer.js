@@ -5,7 +5,11 @@ import styles from './Footer.module.scss'
 const Footer = () => (
   <footer className={styles.footer}>
     <a target="_blank" rel="noopener noreferrer" href="https://georgetown.edu/">
-      <img src="/img/georgetown-logo.png" alt="Georgetown University Logo" />
+      <img
+        src="/img/georgetown-logo.png"
+        alt="Georgetown University Logo"
+        className={styles.georgetown}
+      />
     </a>
     <a
       target="_blank"
