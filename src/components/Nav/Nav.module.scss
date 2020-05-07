@@ -185,12 +185,18 @@ nav a {
     border-radius: 3px;
     transition: 0.25s background-color ease;
     background-color: #041e42;
+    margin-left: 1rem;
 
     &:hover {
       text-decoration: none;
       background-color: #041e42c0;
       transition: 0.25s background-color ease;
     }
+  }
+
+  .active {
+    text-decoration: underline;
+    // font-weight: 700;
   }
 }
 
