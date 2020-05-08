@@ -66,9 +66,10 @@ const Contact = () => {
       <form className={styles.main} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
           <p>
-            We welcome questions about the Frontline Guide, feedback on its
-            contents, input on how COVID-Local efforts can support your
-            community, or other questions or comments, using the form below.
+            We welcome questions and feedback about the site, its contents, or
+            how to use the materials to support epidemic emergency management in
+            your country or community, as well as requests for technical
+            assistance. Please use the form below to contact us.
           </p>
           <p>
             Your personal and contact information will only be used to respond
