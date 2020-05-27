@@ -90,10 +90,10 @@ const IndexPage = ({ data }) => {
             response efforts rely on the key principles of emergency management,
             including coordination of efforts as typically managed by Emergency
             Operations Centers (EOCs). This site, developed by Georgetown
-            University and the US Centers for Disease Control, provides rapid
-            access to training materials, checklists, and other resources for
-            development and strengthening of public health emergency management
-            capacities, with an emphasis on EOCs.
+            University and the US Centers for Disease Control and Prevention,
+            provides rapid access to training materials, checklists, and other
+            resources for development and strengthening of public health
+            emergency management capacities, with an emphasis on EOCs.
           </p>
         </div>
         <div className={styles.image}>
