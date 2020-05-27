@@ -60,8 +60,10 @@ jobs:
             --paths \
             "/index.html" \
             "/about/index.html" \
+            "/contact/index.html" \
             "/" \
-            "/about/"
+            "/about/" \
+            "/contact/"
 
       - run:
           name: Notify Slack
