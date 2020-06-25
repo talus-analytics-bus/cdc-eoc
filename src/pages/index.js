@@ -13,7 +13,12 @@ const IndexPage = ({ data }) => {
   console.log(
     data.allFile.nodes
       .filter(document => !document.name.match(/^[0-9] - /g))
-      .map(document => document.name + document.ext)
+      .map(
+        document =>
+          `${document.name + document.ext}, ${
+            displayNames[document.name + document.ext]
+          }`
+      )
   )
   const directories = [
     ...new Set(data.allFile.nodes.map(node => node.relativeDirectory)),
