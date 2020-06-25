@@ -60,8 +60,9 @@ const aboutPage = () => {
         <h1>Acknowledgements</h1>
         <p>
           This effort was completed by Georgetown University Center for Global
-          Health Science and Security in collaboration with Talus Analytics, and
-          funded by the CDC Foundation.
+          Health Science and Security in collaboration with Talus Analytics,
+          with support from the CDC Foundation and the Bill and Melinda Gates
+          Foundation.
         </p>
       </article>
       <article className={styles.main}></article>
