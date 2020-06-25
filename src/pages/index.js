@@ -39,6 +39,8 @@ const IndexPage = ({ data }) => {
           aria-label="Download"
           key={document.name}
           className={styles.document}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {/* {console.log(document.name)} */}
           <span className={styles[document.ext.replace('.', '')]}></span>
