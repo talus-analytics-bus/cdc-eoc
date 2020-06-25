@@ -32,7 +32,9 @@ const IndexPage = ({ data }) => {
 
   const createDocElements = documents =>
     documents
-      .sort((a, b) => a.name.localeCompare(b.name))
+      .sort((a, b) =>
+        displayNames[a.name + a.ext].localeCompare(displayNames[b.name + b.ext])
+      )
       .map(document => (
         <a
           href={document.publicURL}
@@ -116,7 +118,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div className={styles.image}>
           <iframe
-            src="https://player.vimeo.com/video/430806620"
+            src="https://player.vimeo.com/video/430806620?texttrack=en"
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen
