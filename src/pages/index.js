@@ -5,10 +5,16 @@ import SEO from '../components/Seo/Seo'
 import Layout from '../components/Layout/Layout'
 import ExpandBox from '../components/ExpandBox/ExpandBox'
 
+import displayNames from '../metadata/displayNames'
+
 import styles from '../styles/home.module.scss'
 
 const IndexPage = ({ data }) => {
-  // console.log(data.allFile.nodes.map(document => document.name + document.ext))
+  console.log(
+    data.allFile.nodes
+      .filter(document => !document.name.match(/^[0-9] - /g))
+      .map(document => document.name + document.ext)
+  )
   const directories = [
     ...new Set(data.allFile.nodes.map(node => node.relativeDirectory)),
   ].filter(dir => dir !== 'zip')
@@ -27,13 +33,16 @@ const IndexPage = ({ data }) => {
         key={document.name}
         className={styles.document}
       >
+        {/* {console.log(document.name)} */}
         <span className={styles[document.ext.replace('.', '')]}></span>
         <p className={styles.displayName}>
-          {document.name
-            .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ')
-            .replace(/eoc/g, 'EOC')
-            .replace(/ics/g, 'ICS')
-            .replace(/cdc/g, 'CDC')}
+          {displayNames[document.name + document.ext]}
+          {/* console.log(document.name) */}
+          {/* {document.name */}
+          {/*   .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ') */}
+          {/*   .replace(/eoc/g, 'EOC') */}
+          {/*   .replace(/ics/g, 'ICS') */}
+          {/*   .replace(/cdc/g, 'CDC')} */}
         </p>
         <p className={styles.fileName}>
           {document.name}
