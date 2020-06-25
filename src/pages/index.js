@@ -31,31 +31,33 @@ const IndexPage = ({ data }) => {
   directories.sort((a, b) => a.localeCompare(b))
 
   const createDocElements = documents =>
-    documents.map(document => (
-      <a
-        href={document.publicURL}
-        aria-label="Download"
-        key={document.name}
-        className={styles.document}
-      >
-        {/* {console.log(document.name)} */}
-        <span className={styles[document.ext.replace('.', '')]}></span>
-        <p className={styles.displayName}>
-          {displayNames[document.name + document.ext]}
-          {/* console.log(document.name) */}
-          {/* {document.name */}
-          {/*   .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ') */}
-          {/*   .replace(/eoc/g, 'EOC') */}
-          {/*   .replace(/ics/g, 'ICS') */}
-          {/*   .replace(/cdc/g, 'CDC')} */}
-        </p>
-        <p className={styles.fileName}>
-          {document.name}
-          {document.ext}
-        </p>
-        <p className={styles.size}>{document.prettySize}</p>
-      </a>
-    ))
+    documents
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map(document => (
+        <a
+          href={document.publicURL}
+          aria-label="Download"
+          key={document.name}
+          className={styles.document}
+        >
+          {/* {console.log(document.name)} */}
+          <span className={styles[document.ext.replace('.', '')]}></span>
+          <p className={styles.displayName}>
+            {displayNames[document.name + document.ext]}
+            {/* console.log(document.name) */}
+            {/* {document.name */}
+            {/*   .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ') */}
+            {/*   .replace(/eoc/g, 'EOC') */}
+            {/*   .replace(/ics/g, 'ICS') */}
+            {/*   .replace(/cdc/g, 'CDC')} */}
+          </p>
+          <p className={styles.fileName}>
+            {document.name}
+            {document.ext}
+          </p>
+          <p className={styles.size}>{document.prettySize}</p>
+        </a>
+      ))
 
   const categoryElements = directories.map(directory => {
     const documents = data.allFile.nodes.filter(
