@@ -30,38 +30,46 @@ const IndexPage = ({ data }) => {
 
   directories.sort((a, b) => a.localeCompare(b))
 
-  const createDocElements = documents =>
-    documents
-      .sort((a, b) =>
-        displayNames[a.name + a.ext].localeCompare(displayNames[b.name + b.ext])
-      )
-      .map(document => (
-        <a
-          href={document.publicURL}
-          aria-label="Download"
-          key={document.name}
-          className={styles.document}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {/* {console.log(document.name)} */}
-          <span className={styles[document.ext.replace('.', '')]}></span>
-          <p className={styles.displayName}>
-            {displayNames[document.name + document.ext]}
-            {/* console.log(document.name) */}
-            {/* {document.name */}
-            {/*   .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ') */}
-            {/*   .replace(/eoc/g, 'EOC') */}
-            {/*   .replace(/ics/g, 'ICS') */}
-            {/*   .replace(/cdc/g, 'CDC')} */}
-          </p>
-          <p className={styles.fileName}>
-            {document.name}
-            {document.ext}
-          </p>
-          <p className={styles.size}>{document.prettySize}</p>
-        </a>
-      ))
+  const createDocElements = documents => {
+    const alpha = documents.sort((a, b) =>
+      displayNames[a.name + a.ext].localeCompare(displayNames[b.name + b.ext])
+    )
+    const moduleDescription = alpha.filter(document =>
+      /^Module [1-9]/.test(displayNames[document.name + document.ext])
+    )
+    const otherDocuments = alpha.filter(
+      document =>
+        !/^Module [1-9]/.test(displayNames[document.name + document.ext])
+    )
+    const sorted = [...moduleDescription, ...otherDocuments]
+    return sorted.map(document => (
+      <a
+        href={document.publicURL}
+        aria-label="Download"
+        key={document.name}
+        className={styles.document}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {/* {console.log(document.name)} */}
+        <span className={styles[document.ext.replace('.', '')]}></span>
+        <p className={styles.displayName}>
+          {displayNames[document.name + document.ext]}
+          {/* console.log(document.name) */}
+          {/* {document.name */}
+          {/*   .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ') */}
+          {/*   .replace(/eoc/g, 'EOC') */}
+          {/*   .replace(/ics/g, 'ICS') */}
+          {/*   .replace(/cdc/g, 'CDC')} */}
+        </p>
+        <p className={styles.fileName}>
+          {document.name}
+          {document.ext}
+        </p>
+        <p className={styles.size}>{document.prettySize}</p>
+      </a>
+    ))
+  }
 
   const categoryElements = directories.map(directory => {
     const documents = data.allFile.nodes.filter(
