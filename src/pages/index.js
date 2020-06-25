@@ -115,10 +115,12 @@ const IndexPage = ({ data }) => {
           </p>
         </div>
         <div className={styles.image}>
-          <img
-            src="/img/cover-image.png"
-            alt="Cover Image for An introduction to Public Health Emergency Management and Emergency Operations Centers"
-          />
+          <iframe
+            src="https://player.vimeo.com/video/430806620"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          ></iframe>
         </div>
       </header>
       <article className={styles.main}>
