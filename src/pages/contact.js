@@ -65,6 +65,13 @@ const Contact = () => {
 
       <form className={styles.main} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
+          <div className={styles.accessibility}>
+            <p>
+              If you have any accessibility issues using this site, please
+              contact us directly at{' '}
+              <a href="mailto:COVIDLocal@nti.org">COVIDLocal@nti.org</a>.
+            </p>
+          </div>
           <p>
             We welcome questions and feedback about the site, its contents, or
             how to use the materials to support epidemic emergency management in
