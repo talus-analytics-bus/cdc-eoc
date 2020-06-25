@@ -69,7 +69,10 @@ const Contact = () => {
             <p>
               If you have any accessibility issues using this site, please
               contact us directly at{' '}
-              <a href="mailto:COVIDLocal@nti.org">COVIDLocal@nti.org</a>.
+              <a href="mailto:ihrcosting@georgetown.edu">
+                ihrcosting@georgetown.edu
+              </a>
+              .
             </p>
           </div>
           <p>
