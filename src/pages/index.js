@@ -10,16 +10,16 @@ import displayNames from '../metadata/displayNames'
 import styles from '../styles/home.module.scss'
 
 const IndexPage = ({ data }) => {
-  console.log(
-    data.allFile.nodes
-      .filter(document => !document.name.match(/^[0-9] - /g))
-      .map(
-        document =>
-          `${document.name + document.ext}, ${
-            displayNames[document.name + document.ext]
-          }`
-      )
-  )
+  // console.log(
+  //   data.allFile.nodes
+  //     .filter(document => !document.name.match(/^[0-9] - /g))
+  //     .map(
+  //       document =>
+  //         `${document.name + document.ext}, ${
+  //           displayNames[document.name + document.ext]
+  //         }`
+  //     )
+  // )
   const directories = [
     ...new Set(data.allFile.nodes.map(node => node.relativeDirectory)),
   ].filter(dir => dir !== 'zip')

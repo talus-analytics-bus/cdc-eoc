@@ -42,21 +42,21 @@ const displayNames = {
   '07_tool_paho_simulations_guide.pdf':
     'Guidelines for Developing Emergency Simulations and Drills',
   'prepare-7-2020-eoc-preparedness-planning-training-aar.pptx':
-    'Module 7 - EOC Preparedness, Mitigation and Recovery: COVID-19 Considerations',
+    'Module 7 Guidance - EOC Preparedness, Mitigation and Recovery: COVID-19 Considerations',
   'ppt_eoc_deactivation_process_20200522_FINAL.pptx':
-    'Module 6 - Deactivating an EOC: COVID-19 Considerations',
+    'Module 6 Guidance - Deactivating an EOC: COVID-19 Considerations',
   'eoc_activation_process_20200515_final.pptx':
-    'Module 4 - EOC Activation: COVID-19 Considerations',
+    'Module 4 Guidance - EOC Activation: COVID-19 Considerations',
   'operate-5-2020-eoc-covid-19-operations-guide.pptx':
-    'Module 5 - Operating an EOC: COVID-19 Considerations',
+    'Module 5 Guidance - Operating an EOC: COVID-19 Considerations',
   '1-2020-what-is-an-EOC.pptx':
-    'Module 1 - Using an EOC to Support COVID-19 Response',
+    'Module 1 Guidance - Using an EOC to Support COVID-19 Response',
   '05_IFRC_Guidelines for Assessment in Emergencies_2008.pdf':
     'Guidelines for Assessment in Emergencies',
   '2-2020-organize-ims-for-public-health-overview.pptx':
-    'Module 2 - Introduction to Incident Management Systems (IMS)',
+    'Module 2 Guidance - Introduction to Incident Management Systems (IMS)',
   'eoc-design-and-equipment-considerations-final.pptx':
-    'Module 3 - EOC Design and Equipment Considerations',
+    'Module 3 Guidance - EOC Design and Equipment Considerations',
   'WHO PHEOC Partial Checklist_Operations_EN.pdf':
     'WHO PHEOC Partial Checklist - Operations - English',
   '3-who-2015-pheoc-checklist-for-design-and-equipment-en.pdf':
