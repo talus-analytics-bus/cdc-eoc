@@ -31,11 +31,17 @@ const IndexPage = ({ data }) => {
   // )
   const directories = [
     ...new Set(data.allFile.nodes.map(node => node.relativeDirectory)),
-  ].filter(dir => dir !== 'zip')
+  ]
+    .filter(dir => dir !== 'zip')
+    .filter(dir => dir !== 'guides')
 
   const zipfiles = data.allFile.nodes.filter(
     node => node.relativeDirectory === 'zip'
   )
+  //
+  //   const guides = data.allFile.nodes.filter(
+  //     node => node.relativeDirectory === 'guides'
+  //   )
 
   directories.sort((a, b) => a.localeCompare(b))
 
@@ -124,6 +130,12 @@ const IndexPage = ({ data }) => {
       (node.name === 'EOC Development Tool')
   )
 
+  const guidanceZip = data.allFile.nodes.find(
+    node =>
+      (node.relativeDirectory === 'zip') &
+      (node.name === 'EOC Development Tool Guidance')
+  )
+
   return (
     <Layout>
       <SEO title="EOC Resource Portal" />
@@ -156,10 +168,13 @@ const IndexPage = ({ data }) => {
         <header>
           <h1>EOC GUIDANCE LIBRARY</h1>
           <div className={styles.quickDownload}>
-            <p>Quick download</p>
+            <p>Quick downloads</p>
             <a href={libraryZip.publicURL}>
               Complete Library ({data.allFile.totalCount} files,{' '}
               {libraryZip.prettySize} .zip)
+            </a>
+            <a href={guidanceZip.publicURL}>
+              Powerpoint Guides (7 files, {guidanceZip.prettySize} .zip)
             </a>
           </div>
         </header>

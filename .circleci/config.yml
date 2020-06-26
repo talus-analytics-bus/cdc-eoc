@@ -37,6 +37,12 @@ jobs:
             mkdir ../zip
             zip -r ../zip/EOC\ Development\ Tool.zip *;
 
+      - run: 
+          name: Build Guides Zip
+          command: |
+            cd src/assets/guides
+            zip -r ../zip/EOC\ Development\ Tool\ Guidance.zip *;
+
       - run:
           name: Build Subdirectory Zips
           command: |
