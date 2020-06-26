@@ -9,6 +9,15 @@ import displayNames from '../metadata/displayNames'
 
 import styles from '../styles/home.module.scss'
 
+const maxNameLength = 140
+const trimString = (string, fullRow) => {
+  if (fullRow.length > maxNameLength) {
+    return string.slice(0, maxNameLength / 2) + '...'
+  } else {
+    return string
+  }
+}
+
 const IndexPage = ({ data }) => {
   // console.log(
   //   data.allFile.nodes
@@ -54,7 +63,12 @@ const IndexPage = ({ data }) => {
         {/* {console.log(document.name)} */}
         <span className={styles[document.ext.replace('.', '')]}></span>
         <p className={styles.displayName}>
-          {displayNames[document.name + document.ext]}
+          {trimString(
+            displayNames[document.name + document.ext],
+            displayNames[document.name + document.ext] +
+              document.name +
+              document.ext
+          )}
           {/* console.log(document.name) */}
           {/* {document.name */}
           {/*   .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ') */}
@@ -63,7 +77,12 @@ const IndexPage = ({ data }) => {
           {/*   .replace(/cdc/g, 'CDC')} */}
         </p>
         <p className={styles.fileName}>
-          {document.name}
+          {trimString(
+            document.name,
+            displayNames[document.name + document.ext] +
+              document.name +
+              document.ext
+          )}
           {document.ext}
         </p>
         <p className={styles.size}>{document.prettySize}</p>
