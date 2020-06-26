@@ -59,7 +59,10 @@ const IndexPage = ({ data }) => {
     const sorted = [...moduleDescription, ...otherDocuments]
     return sorted.map(document => (
       <a
-        href={document.publicURL}
+        href={(() => {
+          console.log(document)
+          return document.publicURL
+        })()}
         aria-label="Download"
         key={document.name}
         className={styles.document}
