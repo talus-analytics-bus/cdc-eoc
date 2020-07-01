@@ -160,7 +160,8 @@ const IndexPage = ({ data }) => {
         </div>
         <div className={styles.image}>
           <iframe
-            src="https://player.vimeo.com/video/430806620?texttrack=en"
+            title="Introduction Video"
+            src="https://player.vimeo.com/video/433738538?texttrack=en"
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen

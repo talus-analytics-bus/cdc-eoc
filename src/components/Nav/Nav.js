@@ -28,7 +28,6 @@ const Nav = () => {
     <nav className={styles.mainNav}>
       <Link to="/" aria-label="home" className={styles.navbarLogo}></Link>
       <Link to="/" className={styles.navbarLeftText}>
-        <h1>&nbsp;</h1>
         <h2>PUBLIC HEALTH</h2>
         <h3>EOC Guidance</h3>
       </Link>
