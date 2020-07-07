@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import SEO from '../components/Seo/Seo'
 import Layout from '../components/Layout/Layout'
@@ -58,11 +59,8 @@ const IndexPage = ({ data }) => {
     )
     const sorted = [...moduleDescription, ...otherDocuments]
     return sorted.map(document => (
-      <a
-        href={(() => {
-          // console.log(document)
-          return document.publicURL
-        })()}
+      <OutboundLink
+        href={document.publicURL}
         aria-label="Download"
         key={document.name}
         className={styles.document}
@@ -95,7 +93,7 @@ const IndexPage = ({ data }) => {
           {document.ext}
         </p>
         <p className={styles.size}>{document.prettySize}</p>
-      </a>
+      </OutboundLink>
     ))
   }
 
@@ -112,13 +110,13 @@ const IndexPage = ({ data }) => {
           <p>
             ({documents.length} files, {zip.prettySize})
           </p>
-          <a
+          <OutboundLink
             href={zip.publicURL}
             aria-label="Download Zip File"
             onClick={e => {
               e.stopPropagation()
             }}
-          ></a>
+          ></OutboundLink>
         </header>
         <section className={styles.documents}>
           {createDocElements(documents)}
@@ -173,13 +171,13 @@ const IndexPage = ({ data }) => {
           <h1>EOC GUIDANCE LIBRARY</h1>
           <div className={styles.quickDownload}>
             <p>Quick downloads</p>
-            <a href={libraryZip.publicURL}>
+            <OutboundLink href={libraryZip.publicURL}>
               Complete Library ({data.allFile.totalCount} files,{' '}
               {libraryZip.prettySize} .zip)
-            </a>
-            <a href={guidanceZip.publicURL}>
+            </OutboundLink>
+            <OutboundLink href={guidanceZip.publicURL}>
               Powerpoint Guides (7 files, {guidanceZip.prettySize} .zip)
-            </a>
+            </OutboundLink>
           </div>
         </header>
         <section>{categoryElements}</section>
