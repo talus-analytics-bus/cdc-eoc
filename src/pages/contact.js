@@ -89,22 +89,22 @@ const Contact = () => {
         <div className={styles.formRow}>
           <label className={styles.firstName} htmlFor="firstName">
             First Name*
-            <input type="text" id="firstName" name="firstName" />
+            <input type="text" id="firstName" name="First_Name" />
           </label>
           <label className={styles.lastName} htmlFor="lastName">
             Last Name*
-            <input type="text" id="lastName" name="lastName" />
+            <input type="text" id="lastName" name="Last_Name" />
           </label>
         </div>
 
         <div className={styles.formRow}>
           <label className={styles.email} htmlFor="email">
             Email*
-            <input type="text" id="email" name="email" />
+            <input type="text" id="email" name="Email" />
           </label>
           <label className={styles.org} htmlFor="org">
             Organization*
-            <input type="text" id="org" name="org" />
+            <input type="text" id="org" name="Organization" />
           </label>
         </div>
 
@@ -124,8 +124,8 @@ const Contact = () => {
             <p>
               If you have any accessibility issues using this site, please
               contact us directly at{' '}
-              <a href="mailto:ihrcosting@georgetown.edu">
-                ihrcosting@georgetown.edu
+              <a href="mailto:epidemicmanagement@georgetown.edu">
+                epidemicmanagement@georgetown.edu
               </a>
               .
             </p>
