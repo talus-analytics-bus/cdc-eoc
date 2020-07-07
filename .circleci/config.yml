@@ -129,18 +129,18 @@ jobs:
           name: deploy
           command: aws s3 sync public/ s3://cdc-eoc-dev/ --delete
 
-      # - run:
-      #     name: invalidate index.html
-      #     command: |
-      #       aws cloudfront create-invalidation \
-      #       --distribution-id E1M82XI9UK5PMB \
-      #       --paths \
-      #       "/index.html" \
-      #       "/about/index.html" \
-      #       "/contact/index.html" \
-      #       "/" \
-      #       "/about/" \
-      #       "/contact/"
+      - run:
+          name: invalidate index.html
+          command: |
+            aws cloudfront create-invalidation \
+            --distribution-id E122Z7UCYXWTES \
+            --paths \
+            "/index.html" \
+            "/about/index.html" \
+            "/contact/index.html" \
+            "/" \
+            "/about/" \
+            "/contact/"
 
       - run:
           name: Notify Slack
