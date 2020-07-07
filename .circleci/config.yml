@@ -76,8 +76,6 @@ jobs:
             curl -X POST -H 'Content-type: application/json' --data '{"text":"http://cdc-eoc.s3-website-us-east-1.amazonaws.com/"}' \
             https://hooks.slack.com/services/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
 
-
-jobs:
   deploy-dev:
     working_directory: ~/repo
 
