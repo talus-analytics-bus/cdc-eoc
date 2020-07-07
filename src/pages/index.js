@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => {
     return sorted.map(document => (
       <a
         href={(() => {
-          console.log(document)
+          // console.log(document)
           return document.publicURL
         })()}
         aria-label="Download"

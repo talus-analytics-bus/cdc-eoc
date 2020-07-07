@@ -28,10 +28,18 @@ const Contact = () => {
     } else {
       setErrorMessage('')
       setSubmitButtonText('Submitting...')
+
+      data['site'] = 'EOC Resource Portal'
+      data['subject'] = 'New message from EOC Resource Portal'
+
       axios
-        .post('https://nope', JSON.stringify(data), {
-          headers: { 'Content-Type': 'application/json' },
-        })
+        .post(
+          'https://p0hkpngww3.execute-api.us-east-1.amazonaws.com/submit',
+          JSON.stringify(data),
+          {
+            headers: { 'Content-Type': 'application/json' },
+          }
+        )
         .then(() => {
           setSuccessMessage(
             <h2 className={styles.success}>Feedback Submitted</h2>
@@ -51,11 +59,11 @@ const Contact = () => {
   return (
     <Layout>
       <Helmet
-        title={`Contact the COVID Local team`}
+        title={`Contact the EOC Resource Portal team`}
         meta={[
           {
             name: 'description',
-            content: `Contact the COVID Local team`,
+            content: `Contact the EOC Resource Portal team`,
           },
         ]}
       />
@@ -65,16 +73,6 @@ const Contact = () => {
 
       <form className={styles.main} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
-          <div className={styles.accessibility}>
-            <p>
-              If you have any accessibility issues using this site, please
-              contact us directly at{' '}
-              <a href="mailto:ihrcosting@georgetown.edu">
-                ihrcosting@georgetown.edu
-              </a>
-              .
-            </p>
-          </div>
           <p>
             We welcome questions and feedback about the site, its contents, or
             how to use the materials to support epidemic emergency management in
@@ -121,6 +119,18 @@ const Contact = () => {
           <button className={styles.submit}>{submitButtonText}</button>
         </div>
         <div className={styles.formRow}>{successMessage}</div>
+        <div className={styles.formRow}>
+          <div className={styles.accessibility}>
+            <p>
+              If you have any accessibility issues using this site, please
+              contact us directly at{' '}
+              <a href="mailto:ihrcosting@georgetown.edu">
+                ihrcosting@georgetown.edu
+              </a>
+              .
+            </p>
+          </div>
+        </div>
       </form>
     </Layout>
   )
