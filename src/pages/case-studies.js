@@ -165,23 +165,23 @@ const Blog = () => {
 
       <section className={styles.main}>
         <section className={styles.blogPosts}>
-          {/* <div className={styles.filters}> */}
-          {/*   <button onClick={onClickFilter} aria-pressed={filter === 'ALL'}> */}
-          {/*     ALL */}
-          {/*   </button> */}
-          {/*   <button */}
-          {/*     onClick={onClickFilter} */}
-          {/*     aria-pressed={filter === 'NOTES FROM THE FIELD'} */}
-          {/*   > */}
-          {/*     PRESS RELEASES */}
-          {/*   </button> */}
-          {/*   <button */}
-          {/*     onClick={onClickFilter} */}
-          {/*     aria-pressed={filter === 'REPORTS FROM EXPERTS'} */}
-          {/*   > */}
-          {/*     REPORTS */}
-          {/*   </button> */}
-          {/* </div> */}
+          <div className={styles.filters}>
+            <button onClick={onClickFilter} aria-pressed={filter === 'ALL'}>
+              CASE STUDIES
+            </button>
+            {/* <button */}
+            {/*   onClick={onClickFilter} */}
+            {/*   aria-pressed={filter === 'NOTES FROM THE FIELD'} */}
+            {/* > */}
+            {/*   PRESS RELEASES */}
+            {/* </button> */}
+            {/* <button */}
+            {/*   onClick={onClickFilter} */}
+            {/*   aria-pressed={filter === 'REPORTS FROM EXPERTS'} */}
+            {/* > */}
+            {/*   REPORTS */}
+            {/* </button> */}
+          </div>
 
           {createBlogPostElements(searchedPosts)}
         </section>
