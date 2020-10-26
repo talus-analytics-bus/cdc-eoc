@@ -15,8 +15,6 @@ export default function Template({
 }) {
   const { airtable: post } = data // data.markdownRemark holds your post data
 
-  console.log(post)
-
   const blogPostImage = filename => {
     const noBackslashes = filename.replace(/\\/g, '')
     const url = post.data.Additional_Images.find(
@@ -36,8 +34,6 @@ export default function Template({
       ...post.data.Blog_Text.matchAll(/\[IMAGE: "(.*)"\]/g),
     ]
 
-    console.log(imageFileNames)
-
     textSections.forEach((text, index) => {
       if (post.data.Additional_Images[index]) {
         blogTextWithImages =
@@ -50,11 +46,11 @@ export default function Template({
     blogTextWithImages = post.data.Blog_Text
   }
 
-  console.log(post.data.Blog_Text)
-  console.log(blogTextWithImages)
-  console.log(
-    unified().use(markdown).use(html).processSync(blogTextWithImages).contents
-  )
+  // console.log(post.data.Blog_Text)
+  // console.log(blogTextWithImages)
+  // console.log(
+  // unified().use(markdown).use(html).processSync(blogTextWithImages).contents
+  // )
 
   return (
     <Layout>

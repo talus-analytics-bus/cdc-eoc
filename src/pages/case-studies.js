@@ -49,7 +49,7 @@ const Blog = () => {
   const [searchString, setSearchString] = React.useState('')
   const [filter, setFilter] = React.useState('ALL')
 
-  console.log(filter)
+  // console.log(filter)
 
   const createBlogPostElements = posts =>
     posts
