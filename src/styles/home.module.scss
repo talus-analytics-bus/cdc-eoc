@@ -32,6 +32,7 @@
 
     p {
       font-size: 1.1rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -67,7 +68,8 @@
 
   // minimum value for quick download
   // to be visible in IE
-  margin-top: 4rem;
+  // margin-top: 4rem;
+  margin-top: 0;
 
   > header {
     flex-basis: 100%;

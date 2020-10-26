@@ -155,6 +155,25 @@ const IndexPage = ({ data }) => {
             resources for development and strengthening of public health
             emergency management capacities, with an emphasis on EOCs.
           </p>
+          <p>
+            We are also working with partners across the world to develop case
+            studies of how countries have developed and operationalized their
+            EOCs to support responding to COVID-19, to provide examples for
+            approaches that can be applied to epidemic emergency management
+            capacity strengthening. If you work at a national or sub-national
+            EOC, and are interested in collaborating with us on a case study,
+            please <a href="/contact/">contact us!</a>
+          </p>
+          <p>
+            ¡ACTUALIZAR! Para ampliar el acceso, todos los powerpoints de
+            capacitación y la mayoría de los recursos clave ahora también están
+            disponibles en español.
+          </p>
+          <p>
+            Todos los materiales en español se pueden descargar como un archivo
+            zip, o se puede acceder a cada archivo individualmente en las
+            diferentes secciones a continuación.
+          </p>
         </div>
         <div className={styles.image}>
           <iframe
