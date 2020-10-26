@@ -39,6 +39,9 @@ const Nav = () => {
               <Link activeClassName={styles.active} to="/">
                 Home
               </Link>
+              <Link activeClassName={styles.active} to="/case-studies/">
+                Case Studies
+              </Link>
               <Link activeClassName={styles.active} to="/about/">
                 About
               </Link>
