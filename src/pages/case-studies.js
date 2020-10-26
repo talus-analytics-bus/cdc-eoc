@@ -166,7 +166,10 @@ const Blog = () => {
       <section className={styles.main}>
         <section className={styles.blogPosts}>
           <div className={styles.filters}>
-            <button onClick={onClickFilter} aria-pressed={filter === 'ALL'}>
+            <button
+              onClick={e => e.preventDefault()}
+              aria-pressed={filter === 'ALL'}
+            >
               CASE STUDIES
             </button>
             {/* <button */}
