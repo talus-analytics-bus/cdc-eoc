@@ -65,12 +65,7 @@ jobs:
             aws cloudfront create-invalidation \
             --distribution-id E1M82XI9UK5PMB \
             --paths \
-            "/index.html" \
-            "/about/index.html" \
-            "/contact/index.html" \
-            "/" \
-            "/about/" \
-            "/contact/"
+            "/*"
 
       - run:
           name: Notify Slack
@@ -98,7 +93,7 @@ jobs:
             pip3 install --upgrade setuptools pytz
             pip3 install awsebcli==3.10.0
             pip3 install boto3
-            
+
       - aws-cli/install
       - aws-cli/configure
 
@@ -139,12 +134,7 @@ jobs:
             aws cloudfront create-invalidation \
             --distribution-id E122Z7UCYXWTES \
             --paths \
-            "/index.html" \
-            "/about/index.html" \
-            "/contact/index.html" \
-            "/" \
-            "/about/" \
-            "/contact/"
+            "/*"
 
       - run:
           name: Notify Slack
