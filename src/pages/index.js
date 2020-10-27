@@ -32,10 +32,7 @@ const IndexPage = ({ data }) => {
   // )
   const directories = [
     ...new Set(data.allFile.nodes.map(node => node.relativeDirectory)),
-  ]
-    .filter(dir => dir !== 'zip')
-    .filter(dir => dir !== 'guides')
-    .filter(dir => dir !== 'spanish')
+  ].filter(dir => !['', 'zip', 'guides', 'spanish'].includes(dir))
 
   const spanishFiles = data.allFile.nodes.filter(
     file => file.relativeDirectory === 'spanish'
@@ -105,12 +102,17 @@ const IndexPage = ({ data }) => {
     ))
   }
 
+  console.log(directories)
+
   const categoryElements = directories.map(directory => {
     const documents = data.allFile.nodes.filter(
       node => node.relativeDirectory === directory
     )
     const sectionName = directory.split('/').pop()
+    console.log(directory)
     const zip = zipfiles.find(zip => zip.name === sectionName)
+    console.log(sectionName)
+    console.log(zip)
     return (
       <ExpandBox key={directory.split('/').pop()}>
         <header className={styles.expandBoxHeader}>
