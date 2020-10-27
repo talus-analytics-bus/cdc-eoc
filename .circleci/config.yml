@@ -17,12 +17,14 @@ jobs:
           name: Installing Deployment Dependencies
           working_directory: /
           command: |
-            apt-get -y -qq update
-            apt-get -y install python3-pip python3-dev g++ build-essential
+            sudo apt-get -y -qq update
+            sudo apt-get -y install python3-pip python3-dev g++ build-essential
             pip3 install --upgrade pip
-            apt-get remove python-pip
+            sudo apt-get remove python-pip
             pip3 install --upgrade setuptools pytz
             pip3 install awsebcli==3.10.0
+            pip3 install boto3
+
       - aws-cli/install
       - aws-cli/configure
 
