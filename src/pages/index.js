@@ -102,17 +102,12 @@ const IndexPage = ({ data }) => {
     ))
   }
 
-  console.log(directories)
-
   const categoryElements = directories.map(directory => {
     const documents = data.allFile.nodes.filter(
       node => node.relativeDirectory === directory
     )
     const sectionName = directory.split('/').pop()
-    console.log(directory)
     const zip = zipfiles.find(zip => zip.name === sectionName)
-    console.log(sectionName)
-    console.log(zip)
     return (
       <ExpandBox key={directory.split('/').pop()}>
         <header className={styles.expandBoxHeader}>

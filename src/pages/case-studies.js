@@ -155,7 +155,6 @@ const Blog = () => {
     searchedPosts = fuse.search(searchString).map(result => result.item)
 
     if (searchedPosts.length === 0) {
-      console.log('add dummy post')
       searchedPosts = [
         {
           node: {
@@ -179,8 +178,6 @@ const Blog = () => {
       ]
     }
   }
-
-  console.log(filteredPosts)
 
   return (
     <Layout>
