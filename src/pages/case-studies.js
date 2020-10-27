@@ -59,14 +59,16 @@ const Blog = () => {
           <h1>
             <Link to={post.data.URL}>{post.data.Title}</Link>
           </h1>
-          <h2>
-            {new Date(post.data.Date).toLocaleString('default', {
-              month: 'short',
-              day: 'numeric',
-              year: 'numeric',
-              timeZone: 'UTC',
-            })}
-          </h2>
+          {post.data.Date && (
+            <h2>
+              {new Date(post.data.Date).toLocaleString('default', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                timeZone: 'UTC',
+              })}
+            </h2>
+          )}
           <h3
             dangerouslySetInnerHTML={{
               __html: post.data.Author,
@@ -76,12 +78,14 @@ const Blog = () => {
             dangerouslySetInnerHTML={{
               __html:
                 renderToString(
-                  <Link to={post.data.URL}>
-                    <img
-                      src={post.data.Cover_Image[0].url}
-                      alt={post.data.Title}
-                    />
-                  </Link>
+                  post.data.URL !== '#' && (
+                    <Link to={post.data.URL}>
+                      <img
+                        src={post.data.Cover_Image[0].url}
+                        alt={post.data.Title}
+                      />
+                    </Link>
+                  )
                 ) +
                 unified()
                   .use(markdown)
@@ -94,7 +98,11 @@ const Blog = () => {
                   .slice(0, 150)
                   .join(' ') +
                 ' ' +
-                renderToString(<Link to={post.data.URL}>read more</Link>),
+                renderToString(
+                  post.data.URL !== '#' && (
+                    <Link to={post.data.URL}>read more</Link>
+                  )
+                ),
             }}
           ></p>
         </div>
@@ -145,7 +153,34 @@ const Blog = () => {
   let searchedPosts = filteredPosts
   if (searchString !== '') {
     searchedPosts = fuse.search(searchString).map(result => result.item)
+
+    if (searchedPosts.length === 0) {
+      console.log('add dummy post')
+      searchedPosts = [
+        {
+          node: {
+            id: '0',
+            data: {
+              Blog_Text: '',
+              Excerpt: 'Please try a different search.',
+              Cover_Image: [
+                {
+                  url: undefined,
+                },
+              ],
+              Author: '',
+              Category: 'Case Study',
+              Date: undefined,
+              Title: 'No results found for that search.',
+              URL: '#',
+            },
+          },
+        },
+      ]
+    }
   }
+
+  console.log(filteredPosts)
 
   return (
     <Layout>
