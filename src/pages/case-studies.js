@@ -110,14 +110,15 @@ const Blog = () => {
         </div>
       ))
 
-  const onClickFilter = e => {
-    e.preventDefault()
-    if (filter !== e.target.innerHTML) {
-      setFilter(e.target.innerHTML)
-    } else {
-      setFilter('ALL')
-    }
-  }
+  // const onClickFilter = e => {
+  //   e.preventDefault()
+  //   if (filter !== e.target.innerHTML) {
+  //     setFilter(e.target.innerHTML)
+  //   } else {
+  //     setFilter('ALL')
+  //   }
+  // }
+
   // console.log('run component')
   // console.log(posts)
   // posts.map((index, post) => {
@@ -162,6 +163,26 @@ const Blog = () => {
         <h1>Case Studies</h1>
         <Link to="/contact/">Contact us</Link>
       </header>
+
+      <section className={styles.intro}>
+        <p>
+          The application of emergency management principles to epidemic
+          responses, and the use of an Emergency Operations Center to do so, can
+          take many forms. Context is important, and so there is never a “one
+          size fits all” solution to strengthening or operationalizing public
+          health emergency management capabilities.
+        </p>
+        <p>
+          To help support epidemic emergency management in the context of the
+          COVID-19 response, we are developing a series of case studies in
+          collaboration with partners across the world, to demonstrate how
+          different countries have developed and operationalized their EOCs to
+          support the pandemic response at the national and sub-national levels.
+          We hope that these examples will help illustrate the different ways in
+          which public health emergency management capabilities can be build and
+          sustained, and utilized for epidemic response.
+        </p>
+      </section>
 
       <section className={styles.main}>
         <section className={styles.blogPosts}>
