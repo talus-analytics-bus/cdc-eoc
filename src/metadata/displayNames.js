@@ -139,6 +139,36 @@ const displayNames = {
     'WHO After Action Review - English',
   'WHO Guidance for After Action Review_RU.pdf':
     'WHO After Action Review - Russian',
+  '04_doc_eoc_activation_and_transition_criteria_es-sa_TextMaster_TR-312-38138-es.docx':
+    'EOC Activation and Transition Criteria - Spanish',
+  '05_doc_planning_process_es-sa_TextMaster_TR-312-38138-es.doc':
+    'The Incident Action Planning Process - Spanish',
+  '05_tool_ics_form_201_incident_briefing_es-sa_TextMaster_TR-312-77714-es.doc':
+    'ICS Form 201: Incident Briefing - Spanish',
+  '05_tool_ics_form_202_incident_objectives_es-sa_TextMaster_TR-312-77714-es.doc':
+    'ICS Form 202: Incident Objectives - Spanish',
+  '06_doc_eoc_deactivation_es-sa_TextMaster_TR-312-38138-es.docx':
+    'EOC Deactivation - Spanish',
+  '1-2013-moh-thira-theat-hazard-identification-risk-assessment-guide_es-sa_TextMaster_TR-312-38138-es.docx':
+    'THIRA Guide for MOHs - Spanish',
+  '1-2020-what-is-an-EOC_es__1__1__1_es-sa_TextMaster_TR-312-77714-es.pptx':
+    'Module 1 Guidance - Using an EOC to Support COVID-19 Response - Spanish',
+  '2-2020-organize-ims-for-public-health-overview_es-sa_TextMaster_TR-312-77714-es.pptx':
+    'Module 2 Guidance - Introduction to Incident Management Systems (IMS) - Spanish',
+  '3-2020-eoc-design-checklist_es-sa_TextMaster_TR-312-38138-es.docx':
+    'Module 2 Guidance - Introduction to Incident Management Systems (IMS) - Spanish',
+  '3-2020-eoc-equipment-supplies-checklist_es-sa_TextMaster_TR-312-38138-es.docx':
+    'EOC Equipment and Supply Considerations - Spanish',
+  '3-eoc-design-and-equipment-considerations-final_es-sa_TextMaster_TR-312-77714-es.pptx':
+    'Module 3 Guidance - EOC Design and Equipment Considerations - Spanish',
+  '4-eoc_activation_process_20200515_final_es-sa_TextMaster_TR-312-77714-es.pptx':
+    'Module 4 Guidance - EOC Activation: COVID-19 Considerations - Spanish',
+  '5-operate-5-2020-eoc-covid-19-operations-guide_es-sa_TextMaster_TR-312-77714-es.pptx':
+    'Module 5 Guidance - Operating an EOC: COVID-19 Considerations - Spanish',
+  '6-ppt_eoc_deactivation_process_20200522_FINAL_es-sa_TextMaster_TR-312-77714-es.pptx':
+    'Module 6 Guidance - Deactivating an EOC: COVID-19 Considerations - Spanish',
+  '7-prepare-7-2020-eoc-preparedness-planning-training-aar_es-sa_TextMaster_TR-312-77714-es.pptx':
+    'Module 7 Guidance - EOC Preparedness, Mitigation and Recovery: COVID-19 Considerations - Spanish',
 }
 
 export default displayNames

@@ -35,6 +35,7 @@ const IndexPage = ({ data }) => {
   ]
     .filter(dir => dir !== 'zip')
     .filter(dir => dir !== 'guides')
+    .filter(dir => dir !== 'spanish')
 
   const zipfiles = data.allFile.nodes.filter(
     node => node.relativeDirectory === 'zip'
@@ -196,6 +197,10 @@ const IndexPage = ({ data }) => {
             </OutboundLink>
             <OutboundLink href={guidanceZip.publicURL}>
               Powerpoint Guides (7 files, {guidanceZip.prettySize} .zip)
+            </OutboundLink>
+            <OutboundLink href={libraryZip.publicURL}>
+              Descarga todos en Español ({data.allFile.totalCount} files,{' '}
+              {libraryZip.prettySize} .zip)
             </OutboundLink>
           </div>
         </header>
