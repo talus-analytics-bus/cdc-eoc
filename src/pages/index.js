@@ -37,6 +37,10 @@ const IndexPage = ({ data }) => {
     .filter(dir => dir !== 'guides')
     .filter(dir => dir !== 'spanish')
 
+  const spanishFiles = data.allFile.nodes.filter(
+    file => file.relativeDirectory === 'spanish'
+  )
+
   const zipfiles = data.allFile.nodes.filter(
     node => node.relativeDirectory === 'zip'
   )
@@ -141,13 +145,18 @@ const IndexPage = ({ data }) => {
       (node.name === 'EOC Development Tool Guidance')
   )
 
+  const spanishZip = data.allFile.nodes.find(
+    node =>
+      (node.relativeDirectory === 'zip') &
+      (node.name === 'EOC Development Tool Spanish')
+  )
+
   return (
     <Layout>
       <SEO title="EOC Resource Portal" />
       <header className={styles.header}>
         <div className={styles.text}>
           <h1>OVERVIEW</h1>
-          {/* <h2>Who it&apos;s for and how to use this</h2> */}
           <p>
             Effectively responding to and managing the COVID-19 pandemic
             requires close operational coordination across sectors. These
@@ -201,9 +210,9 @@ const IndexPage = ({ data }) => {
             <OutboundLink href={guidanceZip.publicURL}>
               Powerpoint Guides (7 files, {guidanceZip.prettySize} .zip)
             </OutboundLink>
-            <OutboundLink href={libraryZip.publicURL}>
-              Descarga todos en Español ({data.allFile.totalCount} files,{' '}
-              {libraryZip.prettySize} .zip)
+            <OutboundLink href={spanishZip.publicURL}>
+              Descarga todos en Español ({spanishFiles.length} files,{' '}
+              {spanishZip.prettySize} .zip)
             </OutboundLink>
           </div>
         </header>
