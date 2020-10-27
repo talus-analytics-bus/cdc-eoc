@@ -51,9 +51,12 @@ const IndexPage = ({ data }) => {
     const alpha = documents.sort((a, b) =>
       displayNames[a.name + a.ext].localeCompare(displayNames[b.name + b.ext])
     )
-    const moduleDescription = alpha.filter(document =>
-      /^Module [1-9]/.test(displayNames[document.name + document.ext])
-    )
+    const moduleDescription = alpha
+      .filter(document =>
+        /^Module [1-9]/.test(displayNames[document.name + document.ext])
+      )
+      .sort(a => (displayNames[a.name + a.ext].includes('Spanish') ? 1 : -1))
+
     const otherDocuments = alpha.filter(
       document =>
         !/^Module [1-9]/.test(displayNames[document.name + document.ext])

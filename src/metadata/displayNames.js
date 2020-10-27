@@ -152,23 +152,23 @@ const displayNames = {
   '1-2013-moh-thira-theat-hazard-identification-risk-assessment-guide_es-sa_TextMaster_TR-312-38138-es.docx':
     'THIRA Guide for MOHs - Spanish',
   '1-2020-what-is-an-EOC_es__1__1__1_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 1 Guidance - Using an EOC to Support COVID-19 Response - Spanish',
+    'Module 1 Guidance - Spanish - Using an EOC to Support COVID-19 Response',
   '2-2020-organize-ims-for-public-health-overview_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 2 Guidance - Introduction to Incident Management Systems (IMS) - Spanish',
+    'Module 2 Guidance - Spanish - Introduction to Incident Management Systems (IMS)',
   '3-2020-eoc-design-checklist_es-sa_TextMaster_TR-312-38138-es.docx':
-    'Module 2 Guidance - Introduction to Incident Management Systems (IMS) - Spanish',
+    'EOC Design Considerations Checklist - Spanish',
   '3-2020-eoc-equipment-supplies-checklist_es-sa_TextMaster_TR-312-38138-es.docx':
     'EOC Equipment and Supply Considerations - Spanish',
   '3-eoc-design-and-equipment-considerations-final_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 3 Guidance - EOC Design and Equipment Considerations - Spanish',
+    'Module 3 Guidance - Spanish - EOC Design and Equipment Considerations',
   '4-eoc_activation_process_20200515_final_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 4 Guidance - EOC Activation: COVID-19 Considerations - Spanish',
+    'Module 4 Guidance - Spanish - EOC Activation: COVID-19 Considerations',
   '5-operate-5-2020-eoc-covid-19-operations-guide_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 5 Guidance - Operating an EOC: COVID-19 Considerations - Spanish',
+    'Module 5 Guidance - Spanish - Operating an EOC: COVID-19 Considerations',
   '6-ppt_eoc_deactivation_process_20200522_FINAL_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 6 Guidance - Deactivating an EOC: COVID-19 Considerations - Spanish',
+    'Module 6 Guidance - Spanish - Deactivating an EOC: COVID-19 Considerations',
   '7-prepare-7-2020-eoc-preparedness-planning-training-aar_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 7 Guidance - EOC Preparedness, Mitigation and Recovery: COVID-19 Considerations - Spanish',
+    'Module 7 Guidance - Spanish - EOC Preparedness, Mitigation and Recovery: COVID-19 Considerations',
 }
 
 export default displayNames
