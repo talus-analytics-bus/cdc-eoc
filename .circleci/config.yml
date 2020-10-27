@@ -109,6 +109,12 @@ jobs:
             zip -r ../zip/EOC\ Development\ Tool.zip *;
 
       - run: 
+          name: Build Spanish Library Zip
+          command: |
+            cd src/assets/spanish
+            zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
+
+      - run: 
           name: Build Guides Zip
           command: |
             cd src/assets/guides
