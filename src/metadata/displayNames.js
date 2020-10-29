@@ -139,36 +139,35 @@ const displayNames = {
     'WHO After Action Review - English',
   'WHO Guidance for After Action Review_RU.pdf':
     'WHO After Action Review - Russian',
-  '04_doc_eoc_activation_and_transition_criteria_es-sa_TextMaster_TR-312-38138-es.docx':
-    'EOC Activation and Transition Criteria - Spanish',
-  '05_doc_planning_process_es-sa_TextMaster_TR-312-38138-es.doc':
-    'The Incident Action Planning Process - Spanish',
-  '05_tool_ics_form_201_incident_briefing_es-sa_TextMaster_TR-312-77714-es.doc':
-    'ICS Form 201: Incident Briefing - Spanish',
-  '05_tool_ics_form_202_incident_objectives_es-sa_TextMaster_TR-312-77714-es.doc':
-    'ICS Form 202: Incident Objectives - Spanish',
-  '06_doc_eoc_deactivation_es-sa_TextMaster_TR-312-38138-es.docx':
-    'EOC Deactivation - Spanish',
-  '1-2013-moh-thira-theat-hazard-identification-risk-assessment-guide_es-sa_TextMaster_TR-312-38138-es.docx':
-    'THIRA Guide for MOHs - Spanish',
-  '1-2020-what-is-an-EOC_es__1__1__1_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 1 Guidance - Spanish - Using an EOC to Support COVID-19 Response',
-  '2-2020-organize-ims-for-public-health-overview_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 2 Guidance - Spanish - Introduction to Incident Management Systems (IMS)',
-  '3-2020-eoc-design-checklist_es-sa_TextMaster_TR-312-38138-es.docx':
-    'EOC Design Considerations Checklist - Spanish',
-  '3-2020-eoc-equipment-supplies-checklist_es-sa_TextMaster_TR-312-38138-es.docx':
-    'EOC Equipment and Supply Considerations - Spanish',
-  '3-eoc-design-and-equipment-considerations-final_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 3 Guidance - Spanish - EOC Design and Equipment Considerations',
-  '4-eoc_activation_process_20200515_final_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 4 Guidance - Spanish - EOC Activation: COVID-19 Considerations',
-  '5-operate-5-2020-eoc-covid-19-operations-guide_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 5 Guidance - Spanish - Operating an EOC: COVID-19 Considerations',
-  '6-ppt_eoc_deactivation_process_20200522_FINAL_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 6 Guidance - Spanish - Deactivating an EOC: COVID-19 Considerations',
-  '7-prepare-7-2020-eoc-preparedness-planning-training-aar_es-sa_TextMaster_TR-312-77714-es.pptx':
-    'Module 7 Guidance - Spanish - EOC Preparedness, Mitigation and Recovery: COVID-19 Considerations',
+  '01-2013-GUÍA_THIRA_ministerio-de-salud_es-sa.docx':
+    'Guía THIRA para ministerios de salud',
+  '01-2020-Qué-es-un-COE_es__1__1__1_es-sa.pptx':
+    'Módulo 1 Guía: Usando un Centro de Operaciones en Emergencia (COE) para apoyar la respuesta a la COVID-19',
+  '02-2020-Presentación-del-Sistema-de-Gestión-de-Incidentes-SGI_es-sa.pptx':
+    'Módulo 2 Guía: Introdución al Sistema de Gestíon de Incidentes',
+  '03-2020-eoc-Consideraciones-para-los-equipos_es-sa.docx':
+    'Consideraciones para el equipamiento',
+  '03-2020-eoc-lista-de-verificación-de-diseño_es-sa.docx':
+    'Lista de verificación de diseño',
+  '03-Diseño-del-COE-y-consideraciones-de-equipamiento_es-sa.pptx':
+    'Módulo 3 Guía: Diseño y consideraciones de equipar un COE',
+  '04-Activación-del-COE_es-sa.pptx':
+    'Módulo 4 Guía: Processo de activación del COE: Consideraciones para COVID-19',
+  '04_doc_criterios-de-transición-y-activación-del-COE_es-sa.docx':
+    'Criterios de transición y activación',
+  '05-Funcionamiento-de-un-COE-COVID19_es-sa.pptx':
+    'Módulo 5 Guía: Funcionamiento de un COE',
+  '05_doc_PROCESO-DE-PLANIFICACIÓN_es-sa.doc': 'Proceso de planificación',
+  '05_herramienta_formulario_ics_201_SESIÓN-INFORMATIVA-SOBRE-EL-INCIDENTE_es-sa.doc':
+    'Formulario ICS 201: Sesión informativa sobre el incidente',
+  '05_herramienta_formulario_ics_202_OBJECTIVOS-DEL-INCIDENTE_es-sa.doc':
+    'Formulario ICS 202: Objectivos del incidente',
+  '06-ppt_processo_desactivación-del-COE_es-sa.pptx':
+    'Módulo 6 Guía: Processo desactivación del COE: Consideraciones para COVID-19',
+  '06_doc_Desactivación-del-COE_es-sa.docx': 'Desactivación del COE',
+  '07-Preparación-en-el-COE_es-sa.pptx': 'Módulo 7 Guía: Preparación en el COE',
+  '2020-gestión-de-emergencias-de-salud-pública-y-el-COE_ES.vtt':
+    'Gestión de emergencias de salud pública y el COE',
 }
 
 export default displayNames
