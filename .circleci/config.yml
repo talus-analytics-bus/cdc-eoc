@@ -33,7 +33,7 @@ jobs:
           name: yarn install
           command: rm yarn.lock; yarn install --network-timeout 1000000
 
-     - run:
+      - run:
         name: Convert UTF8 Types
         command: |
           cd src/assets/
