@@ -49,7 +49,13 @@ const IndexPage = ({ data }) => {
   directories.sort((a, b) => a.localeCompare(b))
 
   const createDocElements = documents => {
-    documents.forEach(doc => console.log(displayNames[doc.name + doc.ext]))
+    documents.forEach(doc =>
+      console.log(
+        `Filename: ${doc.name + doc.ext}, Display name: ${
+          displayNames[doc.name + doc.ext]
+        }`
+      )
+    )
     const alpha = documents.sort((a, b) =>
       displayNames[a.name + a.ext].localeCompare(displayNames[b.name + b.ext])
     )
