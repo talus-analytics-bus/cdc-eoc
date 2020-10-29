@@ -88,6 +88,7 @@ jobs:
           command: |
             sudo apt-get -y -qq update
             sudo apt-get -y install python3-pip python3-dev g++ build-essential
+            sudo apt-get install convmv
             pip3 install --upgrade pip
             sudo apt-get remove python-pip
             pip3 install --upgrade setuptools pytz
@@ -105,6 +106,7 @@ jobs:
           name: Build Library Zip
           command: |
             cd src/assets/documents
+            convmv -r -f utf8 -t utf8 --nfc --notest
             mkdir ../zip
             zip -r ../zip/EOC\ Development\ Tool.zip *;
 
@@ -112,19 +114,21 @@ jobs:
           name: Build Spanish Library Zip
           command: |
             cd src/assets/spanish
+            convmv -r -f utf8 -t utf8 --nfc --notest
             zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
 
       - run: 
           name: Build Guides Zip
           command: |
             cd src/assets/guides
+            convmv -r -f utf8 -t utf8 --nfc --notest
             zip -r ../zip/EOC\ Development\ Tool\ Guidance.zip *;
 
       - run:
           name: Build Subdirectory Zips
           command: |
             cd src/assets/documents/EOC\ Development\ Tool;
-            for i in */; do zip -r "../../zip/${i%/}.zip" "$i"; done
+            for i in */; do convmv -r -f utf8 -t utf8 --nfc --notest; zip -r "../../zip/${i%/}.zip" "$i"; done
 
       - run:
           name: yarn build
