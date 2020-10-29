@@ -37,7 +37,7 @@ jobs:
         name: Convert UTF8 Types
         command: |
           cd src/assets/
-          convmv -r -f utf8 -t utf8 --nfd --notest .
+          convmv -r -f utf8 -t utf8 --nfd --notest .;
 
       - run: 
           name: Build Library Zip
@@ -119,7 +119,7 @@ jobs:
           name: Convert UTF8 Types
           command: |
             cd src/assets/
-            convmv -r -f utf8 -t utf8 --nfd --notest .
+            convmv -r -f utf8 -t utf8 --nfd --notest .;
 
       - run: 
           name: Build Library Zip
