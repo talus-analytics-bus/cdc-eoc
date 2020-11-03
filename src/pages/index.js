@@ -184,7 +184,7 @@ const IndexPage = ({ data }) => {
             please <a href="/contact/">contact us!</a>
           </p>
           <p>
-            ¡ACTUALIZAR! Para ampliar el acceso, todos los powerpoints de
+            ¡ACTUALIZACIÓN! Para ampliar el acceso, todos los powerpoints de
             capacitación y la mayoría de los recursos clave ahora también están
             disponibles en español.
           </p>
