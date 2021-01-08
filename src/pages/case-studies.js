@@ -182,11 +182,11 @@ const Blog = () => {
   return (
     <Layout>
       <Helmet
-        title={`COVAT Blog`}
+        title={`Epidemic EM Case Studies`}
         meta={[
           {
             name: 'description',
-            content: `COVID Local blog: keeping local leaders up to date during the COVID-19 pandemic.`,
+            content: `To help support epidemic emergency management in the context of the COVID-19 response, we are developing a series of case studies in collaboration with partners across the world, to demonstrate how different countries have developed and operationalized their EOCs to support the pandemic response at the national and sub-national levels. We hope that these examples will help illustrate the different ways in which public health emergency management capabilities can be build and sustained, and utilized for epidemic response.`,
           },
         ]}
       />
