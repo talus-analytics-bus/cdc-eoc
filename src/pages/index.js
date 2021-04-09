@@ -4,7 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import SEO from '../components/Seo/Seo'
 import Layout from '../components/Layout/Layout'
-import ExpandBox from '../components/ExpandBox/ExpandBox'
+import Category from '../components/Category/Category'
 
 import displayNames from '../metadata/displayNames'
 
@@ -117,8 +117,9 @@ const IndexPage = ({ data }) => {
     )
     const sectionName = directory.split('/').pop()
     const zip = zipfiles.find(zip => zip.name === sectionName)
+
     return (
-      <ExpandBox key={directory.split('/').pop()}>
+      <Category key={directory.split('/').pop()}>
         <header className={styles.expandBoxHeader}>
           <h1>{sectionName.replace(/[1-9] - /g, '')}?</h1>
           <p>
@@ -135,7 +136,7 @@ const IndexPage = ({ data }) => {
         <section className={styles.documents}>
           {createDocElements(documents)}
         </section>
-      </ExpandBox>
+      </Category>
     )
   })
 
