@@ -163,47 +163,44 @@ const IndexPage = ({ data }) => {
       <SEO title="EOC Resource Portal" />
       <header className={styles.header}>
         <div className={styles.text}>
-          <h1>OVERVIEW</h1>
+          <h1>
+            Virtual Training Program in Public Health Emergency Management
+          </h1>
           <p>
-            Effectively responding to and managing the COVID-19 pandemic
-            requires close operational coordination across sectors. These
-            response efforts rely on the key principles of emergency management,
-            including coordination of efforts as typically managed by Emergency
-            Operations Centers (EOCs). This site, developed by Georgetown
-            University and the US Centers for Disease Control and Prevention,
-            provides rapid access to training materials, checklists, and other
-            resources for development and strengthening of public health
-            emergency management capacities, with an emphasis on EOCs.
+            Welcome to the Georgetown University Virtual Training Program in
+            Public Health Emergency Management! This program is tailored
+            specifically for national and sub-national Emergency Operations
+            Center personnel involved in epidemic response efforts.
           </p>
           <p>
-            We are also working with partners across the world to develop case
-            studies of how countries have developed and operationalized their
-            EOCs to support responding to COVID-19, to provide examples for
-            approaches that can be applied to epidemic emergency management
-            capacity strengthening. If you work at a national or sub-national
-            EOC, and are interested in collaborating with us on a case study,
-            please <a href="/contact/">contact us!</a>
+            The training is structured around four modules. Within each of these
+            modules, there will be approximately 1.5-2 hours of self-directed
+            “asynchronous” videos and recommended readings, to be completed by
+            each participant individually. Each module will conclude with a 1.5
+            hour live “synchronous” discussion session with experts, to
+            consolidate key concepts and address any questions, as well as a
+            short knowledge check. The modules are each designed to take two
+            weeks to complete, but can be extended or fast-tracked as needed.{' '}
           </p>
           <p>
-            ¡ACTUALIZACIÓN! Para ampliar el acceso, todos los powerpoints de
-            capacitación y la mayoría de los recursos clave ahora también están
-            disponibles en español.
-          </p>
-          <p>
-            Todos los materiales en español se pueden descargar como un archivo
-            zip, o se puede acceder a cada archivo individualmente en las
-            diferentes secciones a continuación.
+            Before starting the training, please complete the pre-training
+            survey available below and email it to Dr. Claire Standley at{' '}
+            <a href="mailto:Claire.standley@georgetown.edu">
+              Claire.standley@georgetown.edu
+            </a>
+            . You will also be asked to complete the post-training survey at the
+            end of the final module.
           </p>
         </div>
-        <div className={styles.image}>
-          <iframe
-            title="Introduction Video"
-            src="https://player.vimeo.com/video/433738538?texttrack=en"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-          ></iframe>
-        </div>
+        {/* <div className={styles.image}> */}
+        {/*   <iframe */}
+        {/*     title="Introduction Video" */}
+        {/*     src="https://player.vimeo.com/video/433738538?texttrack=en" */}
+        {/*     frameBorder="0" */}
+        {/*     allow="autoplay; fullscreen" */}
+        {/*     allowFullScreen */}
+        {/*   ></iframe> */}
+        {/* </div> */}
       </header>
       <article className={styles.main}>
         <header>
