@@ -191,6 +191,49 @@ const IndexPage = ({ data }) => {
             . You will also be asked to complete the post-training survey at the
             end of the final module.
           </p>
+          <p>Pre-training survey:</p>
+          <p>Post-training survey:</p>
+          <p>
+            Biographies for all the experts and guest lecturers are available
+            here: [ADD LINK]
+          </p>
+          <h2>Detailed Module Structure</h2>
+          <h3>1. Strengthening application of IMS</h3>
+          <p>
+            This module will cover the basic structure of an incident management
+            system, with particular reference to its application during complex
+            public health emergencies such as the COVID-19 pandemic. The goal of
+            the module is to increase understanding of the utility and
+            application of IMS for public health emergency management, covering
+            both theoretical and practical aspects.{' '}
+          </p>
+          <h4>Learning objectives</h4>
+          <ul>
+            <li>
+              Summarize roles, responsibilities and minimum requirements of key
+              positions and personnel within IMS
+            </li>
+            <li>
+              Demonstrate ability to update handbooks and SOPs to define
+              activation levels and scales of response
+            </li>
+            <li>
+              Apply knowledge to update current structures and protocols (i.e.
+              from COVID-19) to future all-hazard preparedness and response{' '}
+            </li>
+          </ul>
+          <h4>Pre-module test: [ADD LINK]</h4>
+          <h4>Recommended reading:</h4>
+          <ul>
+            <li>
+              Ma J, Huang Y, Zheng Z-J, 2020, Leveraging the Public Health
+              Emergency Operations Center (PHEOC) for pandemic response:
+              opportunities and challenges, Global Health Journal, 4(4):112-120{' '}
+              <a href="https://www.sciencedirect.com/science/article/pii/S2414644720300579">
+                https://www.sciencedirect.com/science/article/pii/S2414644720300579
+              </a>
+            </li>
+          </ul>
         </div>
         {/* <div className={styles.image}> */}
         {/*   <iframe */}
