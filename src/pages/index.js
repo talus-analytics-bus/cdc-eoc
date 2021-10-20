@@ -193,8 +193,8 @@ const IndexPage = () => {
             . You will also be asked to complete the post-training survey at the
             end of the final module.
           </p>
-          <p>Pre-training survey:</p>
-          <p>Post-training survey:</p>
+          <p>Pre-training survey: [ADD LINK]</p>
+          <p>Post-training survey: [ADD LINK]</p>
           <p>
             Biographies for all the experts and guest lecturers are available
             here: [ADD LINK]
@@ -238,53 +238,53 @@ const IndexPage = () => {
           </ul>
           <h4>Asynchronous lectures:</h4>
           <h5>1.1: Overview of IMS: Dr. Claire Standley, Germany/USA</h5>
-          <iframe
-            src="https://player.vimeo.com/video/637171136?h=72b9fda6b2"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <div className={styles.image}>
+            <iframe
+              src="https://player.vimeo.com/video/637171136?h=72b9fda6b2"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <h5>1.2: Planning section: Dr. Claire Standley, Germany/USA</h5>
-          <iframe
-            src="https://player.vimeo.com/video/637174360?h=d07abfed37"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <div className={styles.image}>
+            <iframe
+              src="https://player.vimeo.com/video/637174360?h=d07abfed37"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <h5>1.3: Operations section: Jim Banaski, USA</h5>
-          <iframe
-            src="https://player.vimeo.com/video/637175178?h=f27947cf45"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <div className={styles.image}>
+            <iframe
+              src="https://player.vimeo.com/video/637175178?h=f27947cf45"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <h5>1.4: Logistics, admin and finance sections: Jim Banaski, USA</h5>
-          <iframe
-            src="https://player.vimeo.com/video/637177941?h=8f2ef30ed5"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <div className={styles.image}>
+            <iframe
+              src="https://player.vimeo.com/video/637177941?h=8f2ef30ed5"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <h5>
             1.5: IMS at the sub-national level: Interview with Dr. Amadou
             Traoré, Guinea/Sierra Leone
           </h5>
-          <iframe
-            src="https://player.vimeo.com/video/637178422?h=73a4325c42"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <div className={styles.image}>
+            <iframe
+              src="https://player.vimeo.com/video/637178422?h=73a4325c42"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <h4>Synchronous section: IMS for partners and surge personnel</h4>
           <h4>Post-module test: [Add link]</h4>
           <h4>Additional resources</h4>
@@ -331,37 +331,37 @@ const IndexPage = () => {
             2.1: Data for decision-making: Interview with Peter Babigumira,
             Uganda
           </h5>
-          <iframe
-            src="https://player.vimeo.com/video/637185427?h=1cfadb8dc6"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <div className={styles.image}>
+            <iframe
+              src="https://player.vimeo.com/video/637185427?h=1cfadb8dc6"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <h5>
             2.2: Data and information management: Dr. Claire Standley,
             Germany/USA
           </h5>
-          <iframe
-            src="https://player.vimeo.com/video/637187323?h=7c621ad01d"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <div className={styles.image}>
+            <iframe
+              src="https://player.vimeo.com/video/637187323?h=7c621ad01d"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <h5>
             2.3: Resource requirements and managing resources: Jim Banaski, USA
           </h5>
-          <iframe
-            src="https://player.vimeo.com/video/637189831?h=a894b5e82c"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <div className={styles.image}>
+            <iframe
+              src="https://player.vimeo.com/video/637189831?h=a894b5e82c"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <h5>
             2.4: Managing resources: Interview with Nevashan Govender, South
             Africa
@@ -380,7 +380,8 @@ const IndexPage = () => {
           </ul>
         </div>
         {/* <div className={styles.image}> */}
-        {/*   <iframe */}
+        {/*   <div className={styles.image}>
+        <iframe */}
         {/*     title="Introduction Video" */}
         {/*     src="https://player.vimeo.com/video/433738538?texttrack=en" */}
         {/*     frameBorder="0" */}

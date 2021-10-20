@@ -32,6 +32,36 @@
     margin: 0 auto;
     margin-bottom: 2rem;
 
+    // iframe {
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: contain;
+    // }
+
+    h2 {
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      border-top: 1px solid black;
+      margin-top: 2em;
+      padding-top: 0.5em;
+      margin-bottom: 1em;
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      margin-top: 1.5em;
+      font-size: 1.2rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+      margin-bottom: 0.25em;
+    }
+
     p {
       font-size: 1.1rem;
       margin-bottom: 1rem;
@@ -45,8 +75,8 @@
     // max-width: 25rem;
     iframe {
       width: 100%;
-      height: 15rem;
-      margin-top: 3rem;
+      height: 24.6rem;
+      // margin-top: 3rem;
     }
 
     img {
