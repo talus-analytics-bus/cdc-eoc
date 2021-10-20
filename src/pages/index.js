@@ -236,6 +236,148 @@ const IndexPage = () => {
               </a>
             </li>
           </ul>
+          <h4>Asynchronous lectures:</h4>
+          <h5>1.1: Overview of IMS: Dr. Claire Standley, Germany/USA</h5>
+          <iframe
+            src="https://player.vimeo.com/video/637171136?h=72b9fda6b2"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <h5>1.2: Planning section: Dr. Claire Standley, Germany/USA</h5>
+          <iframe
+            src="https://player.vimeo.com/video/637174360?h=d07abfed37"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <h5>1.3: Operations section: Jim Banaski, USA</h5>
+          <iframe
+            src="https://player.vimeo.com/video/637175178?h=f27947cf45"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <h5>1.4: Logistics, admin and finance sections: Jim Banaski, USA</h5>
+          <iframe
+            src="https://player.vimeo.com/video/637177941?h=8f2ef30ed5"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <h5>
+            1.5: IMS at the sub-national level: Interview with Dr. Amadou
+            Traoré, Guinea/Sierra Leone
+          </h5>
+          <iframe
+            src="https://player.vimeo.com/video/637178422?h=73a4325c42"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <h4>Synchronous section: IMS for partners and surge personnel</h4>
+          <h4>Post-module test: [Add link]</h4>
+          <h4>Additional resources</h4>
+          <ul>
+            <li>
+              Open WHO “Ready for Response” course:{' '}
+              <a href="https://openwho.org/channels/response">
+                https://openwho.org/channels/response
+              </a>
+            </li>
+            <li>WHO Emergency Response Framework, 2017</li>
+          </ul>
+          <h3>2. Data and resource management</h3>
+          <p>
+            This module will cover how to approach data and resource management
+            within the context of preparedness, response, and recovery, with an
+            emphasis on how these management functions relate to
+            decision-making. The goal is to ensure that participants understand
+            ways to obtain, utilize, and manage different types of critical
+            resources in an operational environment.
+          </p>
+          <h4>Learning objectives</h4>
+          <ul>
+            <li>
+              Identify best practices for data management and decision-making
+            </li>
+            <li>
+              Define resource requirements for different response levels/phases
+            </li>
+            <li>Describe procedures for acquiring and utilizing resources</li>
+          </ul>
+          <h4>Pre-module test: [Add link]</h4>
+          <h4>Recommended reading:</h4>
+          <ul>
+            <li>
+              Building a data-driven culture in emergency management, 2020,{' '}
+              <a href="https://www.domesticpreparedness.com/preparedness/building-a-data-driven-culture-in-emergency-management/">
+                https://www.domesticpreparedness.com/preparedness/building-a-data-driven-culture-in-emergency-management/
+              </a>
+            </li>
+          </ul>
+          <h4>Asynchronous lectures:</h4>
+          <h5>
+            2.1: Data for decision-making: Interview with Peter Babigumira,
+            Uganda
+          </h5>
+          <iframe
+            src="https://player.vimeo.com/video/637185427?h=1cfadb8dc6"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <h5>
+            2.2: Data and information management: Dr. Claire Standley,
+            Germany/USA
+          </h5>
+          <iframe
+            src="https://player.vimeo.com/video/637187323?h=7c621ad01d"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <h5>
+            2.3: Resource requirements and managing resources: Jim Banaski, USA
+          </h5>
+          <iframe
+            src="https://player.vimeo.com/video/637189831?h=a894b5e82c"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <h5>
+            2.4: Managing resources: Interview with Nevashan Govender, South
+            Africa
+          </h5>
+
+          <h4>Synchronous session: Using data and resources effectively</h4>
+          <h4>Post-module test: [Add link]</h4>
+          <h4>Additional resources:</h4>
+          <ul>
+            <li>
+              Turner, A., Reeder, B., & Wallace, J. (2013). A Resource
+              Management Tool for Public Health Continuity of Operations During
+              Disasters. Disaster Medicine and Public Health Preparedness, 7(2),
+              146-152. doi:10.1017/dmp.2013.24
+            </li>
+          </ul>
         </div>
         {/* <div className={styles.image}> */}
         {/*   <iframe */}
