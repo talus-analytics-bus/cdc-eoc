@@ -366,7 +366,6 @@ const IndexPage = () => {
             2.4: Managing resources: Interview with Nevashan Govender, South
             Africa
           </h5>
-
           <h4>Synchronous session: Using data and resources effectively</h4>
           <h4>Post-module test: [Add link]</h4>
           <h4>Additional resources:</h4>
