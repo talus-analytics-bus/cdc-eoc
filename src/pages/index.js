@@ -439,6 +439,52 @@ const IndexPage = () => {
               146-152. doi:10.1017/dmp.2013.24
             </li>
           </ul>
+          <h3>3. Coordination and communication</h3>
+          <p>
+            This module will cover approaches for engaging with multisectoral
+            partners, including protocols for both internal and external
+            (including public) communication, and testing coordination
+            structures via exercises. The goal is to equip participants with the
+            knowledge and skills to design and implement different strategies
+            for coordination and communication, including in the context of
+            large-scale and complex operations.
+          </p>
+          <h4>Learning objectives</h4>
+          <ul>
+            <li>
+              Develop approaches for engaging multisectoral partners in planning
+              and preparedness
+            </li>
+            <li>
+              Outline principles for internal and external communication
+              protocols
+            </li>
+            <li>Appraise components of large-scale operations</li>
+          </ul>
+          <h4 style={{ textAlign: 'center' }}>
+            <em>Content coming soon</em>
+          </h4>
+          <h3>4. Leadership and advocacy</h3>
+          <p>
+            This module will focus on factors underpinning successful
+            implementation and sustainment of public health emergency
+            management. The goal is to encourage participants to think beyond
+            technical skills to the broader leadership, advocacy, and continuous
+            education required to ensure long-term function of an emergency
+            management program.
+          </p>
+          <h4>Learning objectives</h4>
+          <ul>
+            <li>
+              Understand the role and importance of legal frameworks for
+              emergency response operations
+            </li>
+            <li>Apply effective leadership and decision-making strategies</li>
+            <li>Synthesize approaches for training and cascading</li>
+          </ul>
+          <h4 style={{ textAlign: 'center' }}>
+            <em>Content coming soon</em>
+          </h4>
         </div>
         {/* <div className={styles.image}> */}
         {/*   <div className={styles.image}>
