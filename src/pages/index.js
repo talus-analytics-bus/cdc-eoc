@@ -411,8 +411,14 @@ const IndexPage = () => {
             2.4: Managing resources: Interview with Nevashan Govender, South
             Africa
           </h5>
+          <iframe
+            src="https://player.vimeo.com/video/640472640?h=4f0e349293"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
           <h4>Synchronous session: Using data and resources effectively</h4>
-          <h4>Post-module test: [Add link]</h4>
+          <h4>Post-module test</h4>
           <p>
             <a href="/static-documents/assessments/Module 2 - post test.pdf">
               PDF: Module 2 - post test
