@@ -193,8 +193,26 @@ const IndexPage = () => {
             . You will also be asked to complete the post-training survey at the
             end of the final module.
           </p>
-          <p>Pre-training survey: [ADD LINK]</p>
-          <p>Post-training survey: [ADD LINK]</p>
+          <h5>Pre-training survey:</h5>
+          <p>
+            <a href="/static-documents/assessments/Pre-training survey - Using EOCs for Epidemic Response.pdf">
+              PDF: Pre-training survey - Using EOCs for Epidemic Response
+            </a>
+            <br />
+            <a href="/static-documents/assessments/Pre-training survey - Using EOCs for Epidemic Response.docx">
+              DOC: Pre-training survey - Using EOCs for Epidemic Response
+            </a>
+          </p>
+          <h5>Post-training survey:</h5>
+          <p>
+            <a href="/static-documents/assessments/Post-training survey - Using EOCs for Epidemic Response.pdf">
+              PDF: Post-training survey - Using EOCs for Epidemic Response
+            </a>
+            <br />
+            <a href="/static-documents/assessments/Post-training survey - Using EOCs for Epidemic Response.docx">
+              DOC: Post-training survey - Using EOCs for Epidemic Response
+            </a>
+          </p>
           <p>
             Biographies for all the experts and guest lecturers are available
             here: [ADD LINK]
@@ -224,7 +242,16 @@ const IndexPage = () => {
               from COVID-19) to future all-hazard preparedness and response{' '}
             </li>
           </ul>
-          <h4>Pre-module test: [ADD LINK]</h4>
+          <h4>Pre-module test:</h4>
+          <p>
+            <a href="/static-documents/assessments/Module 1 - pre test.pdf">
+              PDF: Module 1 - pre test
+            </a>
+            <br />
+            <a href="/static-documents/assessments/Module 1 - pre test.docx">
+              DOC: Module 1 - pre test
+            </a>
+          </p>
           <h4>Recommended reading:</h4>
           <ul>
             <li>
@@ -286,7 +313,16 @@ const IndexPage = () => {
             />
           </div>
           <h4>Synchronous section: IMS for partners and surge personnel</h4>
-          <h4>Post-module test: [Add link]</h4>
+          <h4>Post-module test</h4>
+          <p>
+            <a href="/static-documents/assessments/Module 1 - post test.pdf">
+              PDF: Module 1 - post test
+            </a>
+            <br />
+            <a href="/static-documents/assessments/Module 1 - post test.docx">
+              DOC: Module 1 - post test
+            </a>
+          </p>
           <h4>Additional resources</h4>
           <ul>
             <li>
@@ -316,7 +352,16 @@ const IndexPage = () => {
             </li>
             <li>Describe procedures for acquiring and utilizing resources</li>
           </ul>
-          <h4>Pre-module test: [Add link]</h4>
+          <h4>Pre-module test</h4>
+          <p>
+            <a href="/static-documents/assessments/Module 2 - pre test.pdf">
+              PDF: Module 2 - pre test
+            </a>
+            <br />
+            <a href="/static-documents/assessments/Module 2 - pre test.docx">
+              DOC: Module 2 - pre test
+            </a>
+          </p>
           <h4>Recommended reading:</h4>
           <ul>
             <li>
@@ -368,6 +413,15 @@ const IndexPage = () => {
           </h5>
           <h4>Synchronous session: Using data and resources effectively</h4>
           <h4>Post-module test: [Add link]</h4>
+          <p>
+            <a href="/static-documents/assessments/Module 2 - post test.pdf">
+              PDF: Module 2 - post test
+            </a>
+            <br />
+            <a href="/static-documents/assessments/Module 2 - post test.docx">
+              DOC: Module 2 - post test
+            </a>
+          </p>
           <h4>Additional resources:</h4>
           <ul>
             <li>
