@@ -4,13 +4,13 @@ import axios from 'axios'
 
 import Layout from '../components/Layout/Layout'
 
-import styles from '../styles/contact.module.scss'
+import * as styles from '../styles/contact.module.scss'
 
 const Contact = () => {
   const [successMessage, setSuccessMessage] = React.useState('')
   const [errorMessage, setErrorMessage] = React.useState('')
   const [submitButtonText, setSubmitButtonText] = React.useState('Submit')
-  const [type, setType] = React.useState('')
+  // const [type, setType] = React.useState('')
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -46,7 +46,7 @@ const Contact = () => {
           )
           setSubmitButtonText('Submit')
         })
-        .catch(error =>
+        .catch(() =>
           setErrorMessage(
             'There was an error submitting your request, please check your network connection and try again.'
           )
@@ -87,22 +87,22 @@ const Contact = () => {
         </div>
         <div className={styles.formRow}>{errorMessage}</div>
         <div className={styles.formRow}>
-          <label className={styles.firstName} htmlFor="firstName">
+          <label htmlFor="firstName">
             First Name*
             <input type="text" id="firstName" name="First_Name" />
           </label>
-          <label className={styles.lastName} htmlFor="lastName">
+          <label htmlFor="lastName">
             Last Name*
             <input type="text" id="lastName" name="Last_Name" />
           </label>
         </div>
 
         <div className={styles.formRow}>
-          <label className={styles.email} htmlFor="email">
+          <label htmlFor="email">
             Email*
             <input type="text" id="email" name="Email" />
           </label>
-          <label className={styles.org} htmlFor="org">
+          <label htmlFor="org">
             Organization*
             <input type="text" id="org" name="Organization" />
           </label>

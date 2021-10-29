@@ -8,7 +8,7 @@ import Layout from '../components/Layout/Layout'
 
 // import displayNames from '../metadata/displayNames'
 
-import styles from '../styles/home.module.scss'
+import * as styles from '../styles/home.module.scss'
 import ExpandBox from '../components/ExpandBox/ExpandBox'
 import styled from 'styled-components'
 

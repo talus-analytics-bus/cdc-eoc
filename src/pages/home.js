@@ -8,7 +8,7 @@ import Category from '../components/Category/Category'
 
 import displayNames from '../metadata/displayNames'
 
-import styles from '../styles/home.module.scss'
+import * as styles from '../styles/home.module.scss'
 
 const maxNameLength = 140
 const trimString = (string, fullRow) => {
@@ -49,13 +49,13 @@ const IndexPage = ({ data }) => {
   directories.sort((a, b) => a.localeCompare(b))
 
   const createDocElements = documents => {
-    documents.forEach(doc =>
-      console.log(
-        `Filename: ${doc.name + doc.ext}, Display name: ${
-          displayNames[doc.name + doc.ext]
-        }`
-      )
-    )
+    // documents.forEach(doc =>
+    //   console.log(
+    //     `Filename: ${doc.name + doc.ext}, Display name: ${
+    //       displayNames[doc.name + doc.ext]
+    //     }`
+    //   )
+    // )
     const alpha = documents.sort((a, b) =>
       displayNames[a.name + a.ext].localeCompare(displayNames[b.name + b.ext])
     )
@@ -106,7 +106,7 @@ const IndexPage = ({ data }) => {
           )}
           {document.ext}
         </p>
-        <p className={styles.size}>{document.prettySize}</p>
+        <p>{document.prettySize}</p>
       </OutboundLink>
     ))
   }

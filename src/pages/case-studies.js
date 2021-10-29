@@ -9,7 +9,7 @@ import html from 'remark-html'
 
 import Layout from '../components/Layout/Layout'
 
-import styles from '../styles/case-studies.module.scss'
+import * as styles from '../styles/case-studies.module.scss'
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -47,7 +47,7 @@ const Blog = () => {
   // console.log(posts.map(post => console.log(post)))
 
   const [searchString, setSearchString] = React.useState('')
-  const [filter, setFilter] = React.useState('ALL')
+  const [filter] = React.useState('ALL')
 
   // console.log(filter)
 

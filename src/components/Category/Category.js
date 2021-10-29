@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ExpandingSection from '../ExpandingSection/ExpandingSection'
-import styles from './Category.module.scss'
+import * as styles from './Category.module.scss'
 
 const Category = props => {
   let children = React.Children.toArray(props.children)
@@ -11,7 +11,7 @@ const Category = props => {
     transform: expanderOpen ? 'scale(1, -1)' : 'scale(1, 1)',
   }
 
-  console.log(iconStyle)
+  // console.log(iconStyle)
 
   return (
     <section className={styles.main}>

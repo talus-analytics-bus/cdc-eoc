@@ -1,6 +1,6 @@
 import React, { useState, useRef, Children } from 'react'
 
-import styles from './ExpandBox.module.scss'
+import * as styles from './ExpandBox.module.scss'
 
 const ExpandBox = props => {
   const children = Children.toArray(props.children)
