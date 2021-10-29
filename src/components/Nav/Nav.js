@@ -36,30 +36,21 @@ const Nav = () => {
         <div className={styles.navbarRight} ref={navbarRightContent}>
           <ul>
             <li>
-              <Link
-                activeClassName={styles.active}
-                to="https://epidemic-em.org/"
-              >
+              <Link activeClassName={styles.active} to="/home/">
                 Home
               </Link>
               <Link activeClassName={styles.active} to="/">
                 Training
               </Link>
-              <Link
-                activeClassName={styles.active}
-                to="https://epidemic-em.org/case-studies/"
-              >
+              <Link activeClassName={styles.active} to="/case-studies/">
                 Case Studies
               </Link>
-              <Link
-                activeClassName={styles.active}
-                to="https://epidemic-em.org/about/"
-              >
+              <Link activeClassName={styles.active} to="/about/">
                 About
               </Link>
               <Link
                 activeClassName={styles.active}
-                to="https://epidemic-em.org/contact/"
+                to="/contact/"
                 className={styles.button}
               >
                 Contact&nbsp;Us
