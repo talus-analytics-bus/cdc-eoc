@@ -214,8 +214,8 @@ const IndexPage = () => {
             </a>
           </p>
           <p>
-            Biographies for all the experts and guest lecturers are available
-            here: [ADD LINK]
+            Biographies for all the experts and guest lecturers{' '}
+            <a href="/trainer-bios/">are available here</a>
           </p>
           <h2>Detailed Module Structure</h2>
           <h3>1. Strengthening application of IMS</h3>
