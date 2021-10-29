@@ -1168,6 +1168,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.15.4":
+  version "7.15.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
+  integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.3.4":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
@@ -1282,6 +1289,25 @@
   dependencies:
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
+
+"@emmetio/abbreviation@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@emmetio/abbreviation/-/abbreviation-2.2.2.tgz#746762fd9e7a8c2ea604f580c62e3cfe250e6989"
+  integrity sha512-TtE/dBnkTCct8+LntkqVrwqQao6EnPAs1YN3cUgxOxTaBlesBCY37ROUAVZrRlG64GNnVShdl/b70RfAI3w5lw==
+  dependencies:
+    "@emmetio/scanner" "^1.0.0"
+
+"@emmetio/css-abbreviation@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@emmetio/css-abbreviation/-/css-abbreviation-2.1.4.tgz#90362e8a1122ce3b76f6c3157907d30182f53f54"
+  integrity sha512-qk9L60Y+uRtM5CPbB0y+QNl/1XKE09mSO+AhhSauIfr2YOx/ta3NJw2d8RtCFxgzHeRqFRr8jgyzThbu+MZ4Uw==
+  dependencies:
+    "@emmetio/scanner" "^1.0.0"
+
+"@emmetio/scanner@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@emmetio/scanner/-/scanner-1.0.0.tgz#065b2af6233fe7474d44823e3deb89724af42b5f"
+  integrity sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==
 
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
@@ -2940,7 +2966,7 @@ babel-plugin-remove-graphql-queries@^2.9.20:
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.9.20.tgz#69ad42efdb3b4340992080afba101d2d1a2843b2"
   integrity sha512-FB4tIvdXaGFBFhHAzlqB0NxVA5BcjzVYbY8ut7ProStW3cjv208ADMlfzmPdSP/I1Z0wl2MrXgHNCrL1TQ/Mew==
 
-"babel-plugin-styled-components@>= 1.12.0":
+"babel-plugin-styled-components@>= 1.12.0", babel-plugin-styled-components@^1.13.3:
   version "1.13.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.13.3.tgz#1f1cb3927d4afa1e324695c78f690900e3d075bc"
   integrity sha512-meGStRGv+VuKA/q0/jXxrPNWEm4LPfYIqxooDTdmh8kFsP/Ph7jJG5rUPwUPX3QHUvggwdbgdGpo88P/rRYsVw==
@@ -5193,6 +5219,14 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+emmet@^2.3.0:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/emmet/-/emmet-2.3.4.tgz#5ba0d7a5569a68c7697dfa890c772e4f3179d123"
+  integrity sha512-3IqSwmO+N2ZGeuhDyhV/TIOJFUbkChi53bcasSNRE7Yd+4eorbbYz4e53TpMECt38NtYkZNupQCZRlwdAYA42A==
+  dependencies:
+    "@emmetio/abbreviation" "^2.2.2"
+    "@emmetio/css-abbreviation" "^2.1.4"
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
@@ -6673,6 +6707,13 @@ gatsby-plugin-sharp@^2.6.0:
     sharp "^0.25.1"
     svgo "1.3.2"
     uuid "^3.4.0"
+
+gatsby-plugin-styled-components@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-5.0.0.tgz#5522b60862767edbf0cd78917ea1e240cd4d5f7f"
+  integrity sha512-k246UvUsYSQ4NSQmiyauzioq7stENkYLM6a/0zkbTRmMtSnlq0HjuxPuyI+1tdjVakXo5H4K0VOjlu0SlBiniQ==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
 
 gatsby-plugin-typescript@^2.4.24:
   version "2.4.24"
@@ -8848,6 +8889,11 @@ json5@^2.1.2:
   integrity sha512-KXPvOm8K9IJKFM0bmdn8QXh7udDh1g/giieX0NLCaMnb4hEiVFqnop2ImTXCc5e0/oHz3LTqmHGtExn5hfMkOA==
   dependencies:
     minimist "^1.2.5"
+
+jsonc-parser@^2.3.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-2.3.1.tgz#59549150b133f2efacca48fe9ce1ec0659af2342"
+  integrity sha512-H8jvkz1O50L3dMZCsLqiuB2tA7muqbSg1AtGEkN0leAqGjsUzDJir3Zwr02BhqdcITPg3ei3mZ+HjMocAknhhg==
 
 jsonfile@^4.0.0:
   version "4.0.0"
@@ -13861,6 +13907,21 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typescript-styled-plugin@^0.18.1:
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/typescript-styled-plugin/-/typescript-styled-plugin-0.18.1.tgz#f752fcc7652f6e3a19059c2d69250e608b35bbe2"
+  integrity sha512-HpFe36TjK997NGUeugJ7p39hoDnRTTu2IwFJkZEkMO+mokkVg3RNzBP8d8i6ofH3Vyx8byk0O6/2o4ISABg/Hw==
+  dependencies:
+    typescript-template-language-service-decorator "^2.2.0"
+    vscode-css-languageservice "^5.1.4"
+    vscode-emmet-helper "^2.6.4"
+    vscode-languageserver-types "^3.16.0"
+
+typescript-template-language-service-decorator@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/typescript-template-language-service-decorator/-/typescript-template-language-service-decorator-2.2.0.tgz#4ee6d580f307fb9239978e69626f2775b8a59b2a"
+  integrity sha512-xiolqt1i7e22rpqMaprPgSFVgU64u3b9n6EJlAaUYE61jumipKAdI1+O5khPlWslpTUj80YzjUKjJ2jxT0D74w==
+
 unbzip2-stream@^1.0.9:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/unbzip2-stream/-/unbzip2-stream-1.4.2.tgz#84eb9e783b186d8fb397515fbb656f312f1a7dbf"
@@ -14319,6 +14380,53 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vscode-css-languageservice@^5.1.4:
+  version "5.1.8"
+  resolved "https://registry.yarnpkg.com/vscode-css-languageservice/-/vscode-css-languageservice-5.1.8.tgz#36cb389788ffc2d5e6630ffc84e55ee38f8a2338"
+  integrity sha512-Si1sMykS8U/p8LYgLGPCfZD1YFT0AtvUJQp9XJGw64DZWhtwYo28G2l64USLS9ge4ZPMZpwdpOK7PfbVKfgiiA==
+  dependencies:
+    vscode-languageserver-textdocument "^1.0.1"
+    vscode-languageserver-types "^3.16.0"
+    vscode-nls "^5.0.0"
+    vscode-uri "^3.0.2"
+
+vscode-emmet-helper@^2.6.4:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/vscode-emmet-helper/-/vscode-emmet-helper-2.6.4.tgz#bea47f17649bba26b412f3d1fac18aaee43eba25"
+  integrity sha512-fP0nunW1RUWEKGf4gqiYLOVNFFGXSRHjCl0pikxtwCFlty8WwimM+RBJ5o0aIiwerrYD30HqeaVyvDW027Sseg==
+  dependencies:
+    emmet "^2.3.0"
+    jsonc-parser "^2.3.0"
+    vscode-languageserver-textdocument "^1.0.1"
+    vscode-languageserver-types "^3.15.1"
+    vscode-nls "^5.0.0"
+    vscode-uri "^2.1.2"
+
+vscode-languageserver-textdocument@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.2.tgz#2f9f6bd5b5eb3d8e21424c0c367009216f016236"
+  integrity sha512-T7uPC18+f8mYE4lbVZwb3OSmvwTZm3cuFhrdx9Bn2l11lmp3SvSuSVjy2JtvrghzjAo4G6Trqny2m9XGnFnWVA==
+
+vscode-languageserver-types@^3.15.1, vscode-languageserver-types@^3.16.0:
+  version "3.16.0"
+  resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.16.0.tgz#ecf393fc121ec6974b2da3efb3155644c514e247"
+  integrity sha512-k8luDIWJWyenLc5ToFQQMaSrqCHiLwyKPHKPQZ5zz21vM+vIVUSvsRpcbiECH4WR88K2XZqc4ScRcZ7nk/jbeA==
+
+vscode-nls@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/vscode-nls/-/vscode-nls-5.0.0.tgz#99f0da0bd9ea7cda44e565a74c54b1f2bc257840"
+  integrity sha512-u0Lw+IYlgbEJFF6/qAqG2d1jQmJl0eyAGJHoAJqr2HT4M2BNuQYSEiSE75f52pXHSJm8AlTjnLLbBFPrdz2hpA==
+
+vscode-uri@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-2.1.2.tgz#c8d40de93eb57af31f3c715dd650e2ca2c096f1c"
+  integrity sha512-8TEXQxlldWAuIODdukIb+TR5s+9Ds40eSJrw+1iDDA9IFORPjMELarNQE3myz5XIkWWpdprmJjm1/SxMlWOC8A==
+
+vscode-uri@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-3.0.2.tgz#ecfd1d066cb8ef4c3a208decdbab9a8c23d055d0"
+  integrity sha512-jkjy6pjU1fxUvI51P+gCsxg1u2n8LSt0W6KrCNQceaziKzff74GoWmjVG46KieVzybO1sttPQmYfrwSHey7GUA==
 
 warning@^4.0.3:
   version "4.0.3"
