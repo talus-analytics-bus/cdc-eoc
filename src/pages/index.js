@@ -71,7 +71,12 @@ const IndexPage = ({ data }) => {
       document =>
         !/^Module|Módulo [1-9]/.test(displayNames[document.name + document.ext])
     )
-    const sorted = [moduleDescription, moduleDescriptionES, ...otherDocuments]
+
+    const sorted = [
+      moduleDescription,
+      ...(moduleDescriptionES ? [moduleDescriptionES] : []),
+      ...otherDocuments,
+    ]
     return sorted.map(document => (
       <OutboundLink
         href={document.publicURL}
