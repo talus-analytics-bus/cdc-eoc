@@ -669,7 +669,7 @@ const IndexPage = () => {
                 </li>
               </ul>
               <h4>Asynchronous lectures:</h4>
-              <h5>4.1: Legal frameworks: Dr. Wessam Merawi, Ethiopia</h5>
+              <h5>4.1: Legal frameworks: Dr. Alexandra Phelan</h5>
               <div className={styles.image}>
                 <iframe
                   src="https://player.vimeo.com/video/656202160?h=5df814008c"
