@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ExpandingSection from '../ExpandingSection/ExpandingSection'
-import styles from './Category.module.scss'
+import * as styles from './Category.module.scss'
 
 const Category = props => {
   let children = React.Children.toArray(props.children)

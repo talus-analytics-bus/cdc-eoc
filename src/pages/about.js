@@ -5,7 +5,7 @@ import SEO from '../components/Seo/Seo'
 import Layout from '../components/Layout/Layout'
 import ExpandBox from '../components/ExpandBox/ExpandBox'
 
-import styles from '../styles/about.module.scss'
+import * as styles from '../styles/about.module.scss'
 
 const aboutPage = () => {
   return (

@@ -8,7 +8,7 @@ import Category from '../components/Category/Category'
 
 import displayNames from '../metadata/displayNames'
 
-import styles from '../styles/home.module.scss'
+import * as styles from '../styles/home.module.scss'
 
 const maxNameLength = 140
 const trimString = (string, fullRow) => {

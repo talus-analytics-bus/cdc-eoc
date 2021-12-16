@@ -9,7 +9,7 @@ import html from 'remark-html'
 
 import Layout from '../components/Layout/Layout'
 
-import styles from '../styles/case-studies.module.scss'
+import * as styles from '../styles/case-studies.module.scss'
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
