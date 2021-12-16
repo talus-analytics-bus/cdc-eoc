@@ -168,6 +168,9 @@ const displayNames = {
   '07-Preparación-en-el-COE_es-sa.pptx': 'Módulo 7 Guía: Preparación en el COE',
   '2020-gestión-de-emergencias-de-salud-pública-y-el-COE_ES.vtt':
     'Gestión de emergencias de salud pública y el COE',
+  '8 - Intra-action review overview.pptx':
+    'Module 4 Guidance - Intra-action review overview',
+  'IAR Review_Houser.pdf': 'IAR Review Houser',
 }
 
 export default displayNames
