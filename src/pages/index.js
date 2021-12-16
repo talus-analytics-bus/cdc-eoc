@@ -492,9 +492,137 @@ const IndexPage = () => {
                 </li>
                 <li>Appraise components of large-scale operations</li>
               </ul>
-              <h4 style={{ textAlign: 'center' }}>
-                <em>Content coming soon</em>
+              <h4>Pre-module test</h4>
+              <p>
+                <a href="/static-documents/assessments/Module 3 - pre test.pdf">
+                  PDF: Module 3 - pre test
+                </a>
+                <br />
+                <a href="/static-documents/assessments/Module 3 - pre test.docx">
+                  DOC: Module 3 - pre test
+                </a>
+              </p>
+              <h4>Recommended reading:</h4>
+              <ul>
+                <li>
+                  WHO. (2017). Communicating Risk in Public Health Emergencies.{' '}
+                  <a href="https://www.who.int/risk-communication/guidance/leaflet.pdf">
+                    https://www.who.int/risk-communication/guidance/leaflet.pdf
+                  </a>
+                </li>
+                <li>
+                  Skryabina E., Reedy G., Amlôt R., Jaye R. & Riley P. (2017).
+                  What is the value of health emergency preparedness exercises?
+                  A scoping review study. International Journal of Disaster Risk
+                  Reduction 21:274-283.
+                  <a href="https://www.sciencedirect.com/science/article/pii/S2212420916304095">
+                    https://www.sciencedirect.com/science/article/pii/S2212420916304095
+                  </a>
+                </li>
+              </ul>
+              <h4>Asynchronous lectures:</h4>
+              <h5>
+                3.1: Stakeholder analysis: Interview with Dr. Claude Millogo,
+                Burkina Faso
+              </h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/652613238?h=4cbe9fffbd"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h5>
+                3.2: Emergency risk communications: Guest lecture by Dr. Julie
+                Fischer, USA
+              </h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/652680609?h=d916370dde"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h5>
+                3.3: Coordination of operations: Dr. Claire Standley,
+                Germany/USA
+              </h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/652681640?h=a6fbfe0d0f"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h5>3.4: Introduction to exercises: Jim Banaski, USA</h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/652682515?h=3aa209a964"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h5>
+                3.5: Designing and implementing exercises – lessons from West
+                Africa: Intervoew with Dr. Amadou Traoré, Guinea/Sierra Leone
+              </h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/652702698?h=79668f646c"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+
+              <h4>
+                Synchronous session: Designing and implementing multisectoral
+                preparedness exercises at regional, national and provincial
+                levels
               </h4>
+              <h4>Post-module test</h4>
+              <p>
+                <a href="/static-documents/assessments/Module 3 - post test.pdf">
+                  PDF: Module 3 - post test
+                </a>
+                <br />
+                <a href="/static-documents/assessments/Module 3 - post test.docx">
+                  DOC: Module 3 - post test
+                </a>
+              </p>
+              <p>
+                Please complete this quiz after the final synchronous webinar,
+                and then email it to Claire.Standley@georgetown.edu when you are
+                done.
+              </p>
+              <h4>Additional resources:</h4>
+              <ul>
+                <li>
+                  WHO Emergency Risk Communication Training:{' '}
+                  <a href="https://www.who.int/emergencies/risk-communications/emergency-risk-communication-training">
+                    https://www.who.int/emergencies/risk-communications/emergency-risk-communication-training
+                  </a>
+                </li>
+                <li>
+                  WHO, 2017, WHO simulation exercise manual: a practical guide
+                  and tool for planning, conducting and evaluating simulation
+                  exercises for outbreaks and public health emergency
+                  preparedness and response.
+                  <a href="https://apps.who.int/iris/handle/10665/254741">
+                    https://apps.who.int/iris/handle/10665/254741
+                  </a>
+                </li>
+                <li>
+                  WHO Simulation Exercise dashboard:{' '}
+                  <a href="https://extranet.who.int/sph/simulation-exercise">
+                    https://extranet.who.int/sph/simulation-exercise
+                  </a>
+                </li>
+              </ul>
             </ModuleContent>
           </ExpandBox>
           <ExpandBox>
@@ -519,9 +647,100 @@ const IndexPage = () => {
                 </li>
                 <li>Synthesize approaches for training and cascading</li>
               </ul>
-              <h4 style={{ textAlign: 'center' }}>
-                <em>Content coming soon</em>
-              </h4>
+              <h4>Pre-module test</h4>
+              <p>
+                <a href="/static-documents/assessments/Module 4 - pre test.pdf">
+                  PDF: Module 4 - pre test
+                </a>
+                <br />
+                <a href="/static-documents/assessments/Module 4 - pre test.docx">
+                  DOC: Module 4 - pre test
+                </a>
+              </p>
+              <h4>Recommended reading:</h4>
+              <ul>
+                <li>
+                  Balajee S et al., 2017, Sustainable Model for Public Health
+                  Emergency Operations Centers for Global Settings, Emerging
+                  Infectious Diseases 23:S190-S195.
+                  <a href="https://wwwnc.cdc.gov/eid/article/23/13/17-0435_article">
+                    https://wwwnc.cdc.gov/eid/article/23/13/17-0435_article
+                  </a>
+                </li>
+              </ul>
+              <h4>Asynchronous lectures:</h4>
+              <h5>4.1: Legal frameworks: Dr. Wessam Merawi, Ethiopia</h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/656202160?h=5df814008c"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h5>
+                4.2: Sustainable program development: Shawn Baker-Garcia, USA
+              </h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/656204979?h=3acda90764"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h5>4.3: Leadership and decision-making: Jim Banaski, USA</h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/656206891?h=3c1cd575d8"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h5>
+                4.4: Training and cascading: Dr. Claire Standley, Germany/USA
+              </h5>
+              <div className={styles.image}>
+                <iframe
+                  src="https://player.vimeo.com/video/656207882?h=617a61eb42"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h4>Synchronous session: Creating a culture of preparedness</h4>
+              <h4>Post-module test</h4>
+              <p>
+                <a href="/static-documents/assessments/Module 4 - post test.pdf">
+                  PDF: Module 4 - post test
+                </a>
+                <br />
+                <a href="/static-documents/assessments/Module 4 - post test.docx">
+                  DOC: Module 4 - post test
+                </a>
+              </p>
+              <h4>Additional resources:</h4>
+              <ul>
+                <li>
+                  UN, Leadership in Emergencies Toolkit,{' '}
+                  <a href="https://hr.un.org/sites/hr.un.org/files/Leadership_in_Emergencies_Toolkit.pdf">
+                    https://hr.un.org/sites/hr.un.org/files/Leadership_in_Emergencies_Toolkit.pdf
+                  </a>
+                </li>
+                <li>
+                  US Federal Emergency Management Agency (FEMA), 2019, Building
+                  Cultures of Preparedness: A report for the emergency
+                  management higher education community.{' '}
+                  <a href="https://training.fema.gov/hiedu/docs/latest/2019_cultures_of_preparedness_report_10.22.18%20final.pdf">
+                    https://training.fema.gov/hiedu/docs/latest/2019_cultures_of_preparedness_report_10.22.18%20final.pdf
+                  </a>
+                </li>
+              </ul>
+              <h3>
+                Please remember to complete the post-training evaluation at the
+                end of the program!
+              </h3>
             </ModuleContent>
           </ExpandBox>
         </div>
