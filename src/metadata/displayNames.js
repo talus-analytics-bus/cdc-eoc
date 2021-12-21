@@ -151,6 +151,8 @@ const displayNames = {
     'Guía THIRA para ministerios de salud',
   '01-2020-Qué-es-un-COE_es__1__1__1_es-sa.pptx':
     'Módulo 1 Guía: Usando un Centro de Operaciones en Emergencia (COE) para apoyar la respuesta a la COVID-19',
+  '1-2020-Qu_est-ce que c_est qu_un COU__1__FR.pptx':
+    'Using an EOC to Support COVID-19 Response - French',
   '02-2020-Presentación-del-Sistema-de-Gestión-de-Incidentes-SGI_es-sa.pptx':
     'Módulo 2 Guía: Introdución al Sistema de Gestíon de Incidentes',
   '03-2020-eoc-Consideraciones-para-los-equipos_es-sa.docx':
