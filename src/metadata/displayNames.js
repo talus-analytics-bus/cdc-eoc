@@ -342,6 +342,8 @@ const displayNames = {
     'Communications Training For WHO Staff - Russian',
   'Effective Communications- Communications Training For WHO Staff - Spanish.pdf':
     'Communications Training For WHO Staff - Spanish',
+  'Multi-Sector Initial Rapid Assessment Guidance Revision July 2015.pdf':
+    'Multi-Sector Initial Rapid Assessment Guidance Revision July 2015',
 }
 
 export default displayNames
