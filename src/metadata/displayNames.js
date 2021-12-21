@@ -55,6 +55,8 @@ const displayNames = {
     'EOC Activation: COVID-19 Considerations - Russian',
   'operate-5-2020-eoc-covid-19-operations-guide.pptx':
     'Module 5 Guidance - Operating an EOC: COVID-19 Considerations',
+  "5-fonctionnement d'un COU_FR.pptx":
+    'Operating an EOC: COVID-19 Considerations - French',
   '1-2020-what-is-an-EOC.pptx':
     'Module 1 Guidance - Using an EOC to Support COVID-19 Response',
   '05_IFRC_Guidelines for Assessment in Emergencies_2008.pdf':
