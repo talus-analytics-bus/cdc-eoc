@@ -330,6 +330,18 @@ const displayNames = {
     'WHO Simulation Exercise Manual - Russian',
   'WHO Simulation Exercise Manual .pdf':
     'WHO Simulation Exercise Manual English',
+  'Effective Communications- Communications Training For WHO Staff - Arabic.pdf':
+    'Communications Training For WHO Staff - Arabic',
+  'Effective Communications- Communications Training For WHO Staff - Chinese.pdf':
+    'Communications Training For WHO Staff - Chinese',
+  'Effective Communications- Communications Training For WHO Staff - English.pdf':
+    'Communications Training For WHO Staff - English',
+  'Effective Communications- Communications Training For WHO Staff - French.pdf':
+    'Communications Training For WHO Staff - French',
+  'Effective Communications- Communications Training For WHO Staff - Russian.pdf':
+    'Communications Training For WHO Staff - Russian',
+  'Effective Communications- Communications Training For WHO Staff - Spanish.pdf':
+    'Communications Training For WHO Staff - Spanish',
 }
 
 export default displayNames
