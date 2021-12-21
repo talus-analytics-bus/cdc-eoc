@@ -45,6 +45,8 @@ const displayNames = {
     'Module 7 Guidance - EOC Preparedness, Mitigation and Recovery: COVID-19 Considerations',
   'ppt_eoc_deactivation_process_20200522_FINAL.pptx':
     'Module 6 Guidance - Deactivating an EOC: COVID-19 Considerations',
+  '6-ppt_FR_COU_desactivation_20200522_FINAL.pptx':
+    'Deactivating an EOC: COVID-19 Considerations - French',
   'eoc_activation_process_20200515_final.pptx':
     'Module 4 Guidance - EOC Activation: COVID-19 Considerations',
   'operate-5-2020-eoc-covid-19-operations-guide.pptx':
