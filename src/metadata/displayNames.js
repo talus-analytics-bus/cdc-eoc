@@ -316,6 +316,8 @@ const displayNames = {
   'COVID-19-vaccination-IAR-(mini-cPIE)-Regional-Webinar-Apr-2021-(for-participants).pdf':
     'Mini-cPIE (COVID-19 vaccination IAR)',
   '842337.pptx': 'WHO COVID-19 IAR Overview Slide Deck',
+  'Module 8 Guidance - Spanish placeholder.ppt':
+    'Módulo 8 Guía: Spanish Placeholder',
 }
 
 export default displayNames
