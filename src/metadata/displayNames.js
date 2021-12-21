@@ -49,6 +49,10 @@ const displayNames = {
     'Deactivating an EOC: COVID-19 Considerations - French',
   'eoc_activation_process_20200515_final.pptx':
     'Module 4 Guidance - EOC Activation: COVID-19 Considerations',
+  '4-activation_COU_processus_FR.pptx':
+    'EOC Activation: COVID-19 Considerations - French',
+  '4_eoc_activation_process_20200515_final_RU.pptx':
+    'EOC Activation: COVID-19 Considerations - Russian',
   'operate-5-2020-eoc-covid-19-operations-guide.pptx':
     'Module 5 Guidance - Operating an EOC: COVID-19 Considerations',
   '1-2020-what-is-an-EOC.pptx':
