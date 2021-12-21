@@ -318,6 +318,16 @@ const displayNames = {
   '842337.pptx': 'WHO COVID-19 IAR Overview Slide Deck',
   'Module 8 Guidance - Spanish placeholder.ppt':
     'Módulo 8 Guía: Spanish Placeholder',
+  'WHO Simulation Exercise Manual - Arabic.pdf':
+    'WHO Simulation Exercise Manual - Arabic',
+  'WHO Simulation Exercise Manual - Chinese.pdf':
+    'WHO Simulation Exercise Manual - Chinese',
+  'WHO Simulation Exercise Manual - French.pdf':
+    'WHO Simulation Exercise Manual - French',
+  'WHO Simulation Exercise Manual - Russian.pdf':
+    'WHO Simulation Exercise Manual - Russian',
+  'WHO Simulation Exercise Manual .pdf':
+    'WHO Simulation Exercise Manual English',
 }
 
 export default displayNames
