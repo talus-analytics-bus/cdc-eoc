@@ -203,11 +203,11 @@ const IndexPage = ({ data }) => {
         <div className={styles.image}>
           <iframe
             title="Introduction Video"
-            src="https://player.vimeo.com/video/433738538?texttrack=en"
+            src="https://player.vimeo.com/video/658845418?h=fed8ca761c"
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen
-          ></iframe>
+          />
         </div>
       </header>
       <article className={styles.main}>
