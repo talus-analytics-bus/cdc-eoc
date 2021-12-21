@@ -344,6 +344,8 @@ const displayNames = {
     'Communications Training For WHO Staff - Spanish',
   'Multi-Sector Initial Rapid Assessment Guidance Revision July 2015.pdf':
     'Multi-Sector Initial Rapid Assessment Guidance Revision July 2015',
+  'Public Health Emergency Operations Center (PHEOC) Legal Framework Guide.pdf':
+    'PHEOC Legal Framework Guide',
 }
 
 export default displayNames
