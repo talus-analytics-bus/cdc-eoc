@@ -8,7 +8,7 @@ import Category from '../components/Category/Category'
 
 import displayNames from '../metadata/displayNames'
 
-import styles from '../styles/home.module.scss'
+import * as styles from '../styles/home.module.scss'
 
 const maxNameLength = 140
 const trimString = (string, fullRow) => {
@@ -71,7 +71,12 @@ const IndexPage = ({ data }) => {
       document =>
         !/^Module|Módulo [1-9]/.test(displayNames[document.name + document.ext])
     )
-    const sorted = [moduleDescription, moduleDescriptionES, ...otherDocuments]
+
+    const sorted = [
+      moduleDescription,
+      ...(moduleDescriptionES ? [moduleDescriptionES] : []),
+      ...otherDocuments,
+    ]
     return sorted.map(document => (
       <OutboundLink
         href={document.publicURL}
@@ -198,11 +203,11 @@ const IndexPage = ({ data }) => {
         <div className={styles.image}>
           <iframe
             title="Introduction Video"
-            src="https://player.vimeo.com/video/433738538?texttrack=en"
+            src="https://player.vimeo.com/video/658845418?h=fed8ca761c"
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen
-          ></iframe>
+          />
         </div>
       </header>
       <article className={styles.main}>

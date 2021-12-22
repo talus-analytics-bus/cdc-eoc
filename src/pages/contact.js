@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import Layout from '../components/Layout/Layout'
 
-import styles from '../styles/contact.module.scss'
+import * as styles from '../styles/contact.module.scss'
 
 const Contact = () => {
   const [successMessage, setSuccessMessage] = React.useState('')

@@ -45,10 +45,20 @@ const displayNames = {
     'Module 7 Guidance - EOC Preparedness, Mitigation and Recovery: COVID-19 Considerations',
   'ppt_eoc_deactivation_process_20200522_FINAL.pptx':
     'Module 6 Guidance - Deactivating an EOC: COVID-19 Considerations',
+  '6-ppt_FR_COU_desactivation_20200522_FINAL.pptx':
+    'Deactivating an EOC: COVID-19 Considerations - French',
   'eoc_activation_process_20200515_final.pptx':
     'Module 4 Guidance - EOC Activation: COVID-19 Considerations',
+  '4-activation_COU_processus_FR.pptx':
+    'EOC Activation: COVID-19 Considerations - French',
+  '4_eoc_activation_process_20200515_final_RU.pptx':
+    'EOC Activation: COVID-19 Considerations - Russian',
   'operate-5-2020-eoc-covid-19-operations-guide.pptx':
     'Module 5 Guidance - Operating an EOC: COVID-19 Considerations',
+  '5_operate-2020-eoc-covid-19-operations-guide_RU.pptx':
+    'Operating an EOC: COVID-19 Considerations - Russian',
+  "5-fonctionnement d'un COU_FR.pptx":
+    'Operating an EOC: COVID-19 Considerations - French',
   '1-2020-what-is-an-EOC.pptx':
     'Module 1 Guidance - Using an EOC to Support COVID-19 Response',
   '05_IFRC_Guidelines for Assessment in Emergencies_2008.pdf':
@@ -143,6 +153,8 @@ const displayNames = {
     'Guía THIRA para ministerios de salud',
   '01-2020-Qué-es-un-COE_es__1__1__1_es-sa.pptx':
     'Módulo 1 Guía: Usando un Centro de Operaciones en Emergencia (COE) para apoyar la respuesta a la COVID-19',
+  '1-2020-Qu_est-ce que c_est qu_un COU__1__FR.pptx':
+    'Using an EOC to Support COVID-19 Response - French',
   '02-2020-Presentación-del-Sistema-de-Gestión-de-Incidentes-SGI_es-sa.pptx':
     'Módulo 2 Guía: Introdución al Sistema de Gestíon de Incidentes',
   '03-2020-eoc-Consideraciones-para-los-equipos_es-sa.docx':
@@ -168,6 +180,182 @@ const displayNames = {
   '07-Preparación-en-el-COE_es-sa.pptx': 'Módulo 7 Guía: Preparación en el COE',
   '2020-gestión-de-emergencias-de-salud-pública-y-el-COE_ES.vtt':
     'Gestión de emergencias de salud pública y el COE',
+  '8 - Intra-action review overview.pptx':
+    'Module 8 Guidance - Intra-action review overview',
+  'IAR Review_Houser.pdf': 'IAR Review Houser',
+  'WHO-2019-nCoV-Country-IAR-add.1-2021.1-eng.pdf':
+    'WHO Guidance for Conducting a Country IAR Addendum 1 - English',
+  'WHO-2019-nCoV-Country-IAR-forms-feedback-2021.1-eng.docx':
+    'WHO Country COVID-19 IAR Participant feedback form 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-forms-feedback-summary-2021.1-eng.xlsx':
+    'WHO Country COVID-19 IAR Participant Feedback Summary 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-manual-facilitator-2021.1-eng.docx':
+    'WHO COVID-19 IAR Facilitator Manual 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-online-review-2021.1-eng.pdf':
+    'WHO COVID-19 IAR Onsite Review 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-onsite-review-2021.1-eng.pdf':
+    'WHO Online Review 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-templates-agenda-2021.1-eng.docx':
+    'WHO COVID-19 IAR Tentative Agenda - English',
+  'WHO-2019-nCoV-Country-IAR-templates-concept-note-2021.1-eng.docx':
+    'WHO COVID-19 IAR Concept Note 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-templates-note-taking-2021.1-eng.docx':
+    'WHO COVID-19 IAR Note Taking Template 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-templates-note-taking-vaccination-2021.1-eng.docx':
+    'WHO COVID-19 IAR Note Taking Template Vaccination - English',
+  'WHO-2019-nCoV-Country-IAR-templates-presentation-2021.1-eng.pptx':
+    'WHO COVID-19 IAR Presentation Template 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-templates-report-2021.1-eng.docx':
+    'WHO COVID-19 IAR Final Report Template 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-templates-report-vaccination-2021.1-eng.docx':
+    'WHO COVID-19 IAR Final Report Template Vaccination - English',
+  'WHO-2019-nCoV-Country-IAR-templates-success-stories-2021.1-eng.docx':
+    'WHO COVID-19 IAR Exemplar Story Template 2021 - English',
+  'WHO-2019-nCoV-Country-IAR-templates-trigger-questions-2021.1-eng.xlsx':
+    'WHO COVID-19 IAR Trigger Questions Database 2021 - English',
+  'WHO-2019-nCoV-Country_IAR-2020.1-ara.pdf':
+    'WHO Guidance for Conducting A Country COVID-19 Intra-Action Review 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-2020.1-chi.pdf':
+    'WHO Guidance for Conducting A Country COVID-19 Intra-Action Review 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-2020.1-eng.pdf':
+    'WHO Guidance for Conducting A Country COVID-19 Intra-Action Review 2020 - English',
+  'WHO-2019-nCoV-Country_IAR-2020.1-fre (1).pdf':
+    'WHO Guidance for Conducting A Country COVID-19 Intra-Action Review 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-2020.1-spa.pdf':
+    'WHO Guidance for Conducting A Country COVID-19 Intra-Action Review 2020 - Spanish',
+  'WHO-2019-nCoV-Country-IAR-2020.1-rus.pdf':
+    'WHO Guidance for Conducting A Country COVID-19 Intra-Action Review 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback-2020.1-ara.docx':
+    'WHO Country COVID-19 IAR Participant Feedback Form 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback-2020.1-chi.docx':
+    'WHO Country COVID-19 IAR Participant Feedback Form 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback-2020.1-fre.docx':
+    'WHO Country COVID-19 IAR Participant Feedback Form 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback-2020.1-rus.docx':
+    'WHO Country COVID-19 IAR Participant Feedback Form 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback-2020.1-spa.docx':
+    'WHO Country COVID-19 IAR Participant Feedback Form 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback_summary-2020.1-ara.xlsx':
+    'WHO Country COVID-19 IAR Participant Feedback Summary 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback_summary-2020.1-chi.xlsx':
+    'WHO Country COVID-19 IAR Participant Feedback Summary 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback_summary-2020.1-fre.xlsx':
+    'WHO Country COVID-19 IAR Participant Feedback Summary 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback_summary-2020.1-rus.xlsx':
+    'WHO Country COVID-19 IAR Participant Feedback Summary 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-forms-feedback_summary-2020.1-spa.xlsx':
+    'WHO Country COVID-19 IAR Participant Feedback Summary 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-manual_facilitator-2020.1-ara.docx':
+    'WHO COVID-19 IAR Facilitator Manual 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-manual_facilitator-2020.1-chi.docx':
+    'WHO COVID-19 IAR Facilitator Manual 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-manual_facilitator-2020.1-fre.docx':
+    'WHO COVID-19 IAR Facilitator Manual 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-manual_facilitator-2020.1-rus.docx':
+    'WHO COVID-19 IAR Facilitator Manual 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-manual_facilitator-2020.1-spa.docx':
+    'WHO COVID-19 IAR Facilitator Manual 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-templates-agenda-2020.1-ara.docx':
+    'WHO COVID-19 IAR Tentative Agenda 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-templates-agenda-2020.1-chi.docx':
+    'WHO COVID-19 IAR Tentative Agenda 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-templates-agenda-2020.1-fre.docx':
+    'WHO COVID-19 IAR Tentative Agenda 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-templates-agenda-2020.1-rus.docx':
+    'WHO COVID-19 IAR Tentative Agenda 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-templates-agenda-2020.1-spa.docx':
+    'WHO COVID-19 IAR Tentative Agenda 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-templates-concept_note-2020.1-ara.docx':
+    'WHO COVID-19 IAR Concept Note 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-templates-concept_note-2020.1-chi.docx':
+    'WHO COVID-19 IAR Concept Note 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-templates-concept_note-2020.1-fre.docx':
+    'WHO COVID-19 IAR Concept Note 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-templates-concept_note-2020.1-rus.docx':
+    'WHO COVID-19 IAR Concept Note 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-templates-concept_note-2020.1-spa.docx':
+    'WHO COVID-19 IAR Concept Note 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-templates-note_taking-2020.1-ara.docx':
+    'WHO COVID-19 IAR Note Taking Template 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-templates-note_taking-2020.1-chi.docx':
+    'WHO COVID-19 IAR Note Taking Template 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-templates-note_taking-2020.1-fre.docx':
+    'WHO COVID-19 IAR Note Taking Template 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-templates-note_taking-2020.1-rus.docx':
+    'WHO COVID-19 IAR Note Taking Template 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-templates-note_taking-2020.1-spa.docx':
+    'WHO COVID-19 IAR Note Taking Template 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-templates-presentation-2020.1-ara.pptx':
+    'WHO COVID-19 IAR Presentation Template 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-templates-presentation-2020.1-chi.pptx':
+    'WHO COVID-19 IAR Presentation Template 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-templates-presentation-2020.1-fre.pptx':
+    'WHO COVID-19 IAR Presentation Template 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-templates-presentation-2020.1-rus.pptx':
+    'WHO COVID-19 IAR Presentation Template 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-templates-presentation-2020.1-spa.pptx':
+    'WHO COVID-19 IAR Presentation Template 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-templates-report-2020.1-ara.docx':
+    'WHO COVID-19 IAR Final Report Template 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-templates-report-2020.1-chi.docx':
+    'WHO COVID-19 IAR Final Report Template 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-templates-report-2020.1-fre.docx':
+    'WHO COVID-19 IAR Final Report Template 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-templates-report-2020.1-spa.docx':
+    'WHO COVID-19 IAR Final Report Template 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-templates-report2020.1-rus.docx':
+    'WHO COVID-19 IAR Final Report Template 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-templates-success_stories-2020.1-ara.docx':
+    'WHO COVID-19 IAR Exemplar Story Template 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-templates-success_stories-2020.1-chi.docx':
+    'WHO COVID-19 IAR Exemplar Story Template 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-templates-success_stories-2020.1-fre.docx':
+    'WHO COVID-19 IAR Exemplar Story Template 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-templates-success_stories-2020.1-rus.docx':
+    'WHO COVID-19 IAR Exemplar Story Template 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-templates-success_stories-2020.1-spa.docx':
+    'WHO COVID-19 IAR Exemplar Story Template 2020 - Spanish',
+  'WHO-2019-nCoV-Country_IAR-templates-trigger_questions-2020.1-ara.xlsx':
+    'WHO COVID-19 IAR Trigger Questions Database 2020 - Arabic',
+  'WHO-2019-nCoV-Country_IAR-templates-trigger_questions-2020.1-chi.xlsx':
+    'WHO COVID-19 IAR Trigger Questions Database 2020 - Chinese',
+  'WHO-2019-nCoV-Country_IAR-templates-trigger_questions-2020.1-fre.xlsx':
+    'WHO COVID-19 IAR Trigger Questions Database 2020 - French',
+  'WHO-2019-nCoV-Country_IAR-templates-trigger_questions-2020.1-rus.xlsx':
+    'WHO COVID-19 IAR Trigger Questions Database 2020 - Russian',
+  'WHO-2019-nCoV-Country_IAR-templates-trigger_questions-2020.1-spa.xlsx':
+    'WHO COVID-19 IAR Trigger Questions Database 2020 - Spanish',
+  'COVID-19-vaccination-IAR-(mini-cPIE)-Regional-Webinar-Apr-2021-(for-participants).pdf':
+    'Mini-cPIE (COVID-19 vaccination IAR)',
+  '842337.pptx': 'WHO COVID-19 IAR Overview Slide Deck',
+  'Module 8 Guidance - Spanish placeholder.ppt':
+    'Módulo 8 Guía: Spanish Placeholder',
+  'WHO Simulation Exercise Manual - Arabic.pdf':
+    'WHO Simulation Exercise Manual - Arabic',
+  'WHO Simulation Exercise Manual - Chinese.pdf':
+    'WHO Simulation Exercise Manual - Chinese',
+  'WHO Simulation Exercise Manual - French.pdf':
+    'WHO Simulation Exercise Manual - French',
+  'WHO Simulation Exercise Manual - Russian.pdf':
+    'WHO Simulation Exercise Manual - Russian',
+  'WHO Simulation Exercise Manual .pdf':
+    'WHO Simulation Exercise Manual English',
+  'Effective Communications- Communications Training For WHO Staff - Arabic.pdf':
+    'Communications Training For WHO Staff - Arabic',
+  'Effective Communications- Communications Training For WHO Staff - Chinese.pdf':
+    'Communications Training For WHO Staff - Chinese',
+  'Effective Communications- Communications Training For WHO Staff - English.pdf':
+    'Communications Training For WHO Staff - English',
+  'Effective Communications- Communications Training For WHO Staff - French.pdf':
+    'Communications Training For WHO Staff - French',
+  'Effective Communications- Communications Training For WHO Staff - Russian.pdf':
+    'Communications Training For WHO Staff - Russian',
+  'Effective Communications- Communications Training For WHO Staff - Spanish.pdf':
+    'Communications Training For WHO Staff - Spanish',
+  'Multi-Sector Initial Rapid Assessment Guidance Revision July 2015.pdf':
+    'Multi-Sector Initial Rapid Assessment Guidance Revision July 2015',
+  'Public Health Emergency Operations Center (PHEOC) Legal Framework Guide.pdf':
+    'PHEOC Legal Framework Guide',
 }
 
 export default displayNames

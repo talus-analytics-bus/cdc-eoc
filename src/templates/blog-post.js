@@ -8,7 +8,7 @@ import html from 'remark-html'
 
 import Layout from '../components/Layout/Layout'
 
-import styles from '../styles/blog-post.module.scss'
+import * as styles from '../styles/blog-post.module.scss'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query we'll write in a bit
