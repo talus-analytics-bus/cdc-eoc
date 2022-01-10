@@ -40,6 +40,8 @@
     flex-basis: 38%;
     position: relative;
     display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
     // max-width: 25rem;
     iframe {
       width: 100%;

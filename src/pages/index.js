@@ -208,6 +208,13 @@ const IndexPage = ({ data }) => {
             allow="autoplay; fullscreen"
             allowFullScreen
           />
+          <iframe
+            title="Introduction Video"
+            src="https://player.vimeo.com/video/430806620?h=93f04eeac6"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
         </div>
       </header>
       <article className={styles.main}>
