@@ -36,10 +36,10 @@ const Nav = () => {
         <div className={styles.navbarRight} ref={navbarRightContent}>
           <ul>
             <li>
-              <Link activeClassName={styles.active} to="/home/">
+              <Link activeClassName={styles.active} to="/">
                 Home
               </Link>
-              <Link activeClassName={styles.active} to="/">
+              <Link activeClassName={styles.active} to="/training/">
                 Training
               </Link>
               <Link activeClassName={styles.active} to="/case-studies/">
