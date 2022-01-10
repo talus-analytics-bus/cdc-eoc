@@ -11,7 +11,7 @@ const Category = props => {
     transform: expanderOpen ? 'scale(1, -1)' : 'scale(1, 1)',
   }
 
-  console.log(iconStyle)
+  // console.log(iconStyle)
 
   return (
     <section className={styles.main}>

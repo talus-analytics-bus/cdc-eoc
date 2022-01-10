@@ -45,7 +45,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // printing out paths to make it easy to copy / paste for the invalidation
   // console.log('blog post paths')
   result.data.allAirtable.edges.forEach(({ node }) => {
-    console.log('"' + node.data.slug + 'index.html' + '" \\')
+    // console.log('"' + node.data.slug + 'index.html' + '" \\')
     // console.log('"' + node.data.slug + '" \\')
     createPage({
       path: node.data.URL,
