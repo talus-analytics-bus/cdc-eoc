@@ -90,7 +90,7 @@ jobs:
     working_directory: ~/repo
 
     docker:
-      - image: cimg/node:14.4
+      - image: cimg/node:lts
 
     steps:
       - checkout
