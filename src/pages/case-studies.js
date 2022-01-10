@@ -47,7 +47,7 @@ const Blog = () => {
   // console.log(posts.map(post => console.log(post)))
 
   const [searchString, setSearchString] = React.useState('')
-  const [filter, setFilter] = React.useState('ALL')
+  const [filter] = React.useState('ALL')
 
   // console.log(filter)
 

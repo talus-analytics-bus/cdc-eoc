@@ -8,7 +8,7 @@ import Category from '../components/Category/Category'
 
 import displayNames from '../metadata/displayNames'
 
-import * as styles from '../styles/home.module.scss'
+import * as styles from '../styles/home-old.module.scss'
 
 const maxNameLength = 140
 const trimString = (string, fullRow) => {
@@ -111,7 +111,7 @@ const IndexPage = ({ data }) => {
           )}
           {document.ext}
         </p>
-        <p className={styles.size}>{document.prettySize}</p>
+        <p>{document.prettySize}</p>
       </OutboundLink>
     ))
   }
@@ -204,6 +204,13 @@ const IndexPage = ({ data }) => {
           <iframe
             title="Introduction Video"
             src="https://player.vimeo.com/video/658845418?h=fed8ca761c"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+          <iframe
+            title="Introduction Video"
+            src="https://player.vimeo.com/video/430806620?h=93f04eeac6"
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen

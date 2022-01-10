@@ -1,9 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 
 import SEO from '../components/Seo/Seo'
 import Layout from '../components/Layout/Layout'
-import ExpandBox from '../components/ExpandBox/ExpandBox'
+// import ExpandBox from '../components/ExpandBox/ExpandBox'
 
 import * as styles from '../styles/about.module.scss'
 

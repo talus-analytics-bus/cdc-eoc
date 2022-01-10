@@ -8,7 +8,7 @@ jobs:
     working_directory: ~/repo
 
     docker:
-      - image: cimg/node:14.4
+      - image: cimg/node:lts
 
     steps:
       - checkout
@@ -39,20 +39,20 @@ jobs:
             cd src/assets/
             convmv -r -f utf8 -t utf8 --nfd --notest .;
 
-      - run: 
+      - run:
           name: Build Library Zip
           command: |
             cd src/assets/documents
             mkdir ../zip
             zip -r ../zip/EOC\ Development\ Tool.zip *;
-            
-      - run: 
+
+      - run:
           name: Build Spanish Library Zip
           command: |
             cd src/assets/spanish
             zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
 
-      - run: 
+      - run:
           name: Build Guides Zip
           command: |
             cd src/assets/guides
@@ -90,7 +90,7 @@ jobs:
     working_directory: ~/repo
 
     docker:
-      - image: cimg/node:14.4
+      - image: cimg/node:lts
 
     steps:
       - checkout
@@ -121,20 +121,20 @@ jobs:
             cd src/assets/
             convmv -r -f utf8 -t utf8 --nfd --notest .;
 
-      - run: 
+      - run:
           name: Build Library Zip
           command: |
             cd src/assets/documents
             mkdir ../zip
             zip -r ../zip/EOC\ Development\ Tool.zip *;
 
-      - run: 
+      - run:
           name: Build Spanish Library Zip
           command: |
             cd src/assets/spanish
             zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
 
-      - run: 
+      - run:
           name: Build Guides Zip
           command: |
             cd src/assets/guides
