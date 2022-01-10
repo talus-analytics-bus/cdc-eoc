@@ -111,7 +111,7 @@ const IndexPage = ({ data }) => {
           )}
           {document.ext}
         </p>
-        <p className={styles.size}>{document.prettySize}</p>
+        <p>{document.prettySize}</p>
       </OutboundLink>
     ))
   }
