@@ -23,6 +23,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `epidemic-em.org`,
+      },
+    },
+    {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.AIRTABLE_API_KEY, // may instead specify via env, see below
