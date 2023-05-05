@@ -113,7 +113,7 @@ jobs:
 
       - run:
           name: yarn install
-          command: rm yarn.lock; yarn install --network-timeout 1000000
+          command: yarn
 
       - run:
           name: Convert UTF8 Types
