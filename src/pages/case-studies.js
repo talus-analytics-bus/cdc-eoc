@@ -30,7 +30,8 @@ const Blog = () => {
               Blog_Text
               Excerpt
               Cover_Image {
-                url
+                # url
+                id
               }
               Author
               Category

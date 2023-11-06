@@ -110,11 +110,13 @@ export const pageQuery = graphql`
         Blog_Text
         Date
         Cover_Image {
-          url
+          id
+          # url
         }
         Additional_Images {
-          filename
-          url
+          id
+          # filename
+          # url
         }
         URL
         Title
