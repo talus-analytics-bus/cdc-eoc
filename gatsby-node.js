@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -17,7 +18,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           data: { Publishing_Status: { eq: "Publish" } }
           table: { eq: "Case Studies" }
         }
-        sort: { order: DESC, fields: data___Date }
+        sort: { data: { Date: DESC } }
       ) {
         edges {
           node {
@@ -55,13 +56,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({
-  stage,
-  rules,
-  loaders,
-  plugins,
-  actions,
-}) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     module: {
       rules: [

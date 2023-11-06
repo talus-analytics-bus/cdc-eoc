@@ -21,7 +21,7 @@ const Blog = () => {
           data: { Publishing_Status: { eq: "Publish" } }
           table: { eq: "Case Studies" }
         }
-        sort: { order: DESC, fields: data___Date }
+        sort: { data: { Date: DESC } }
       ) {
         edges {
           node {
