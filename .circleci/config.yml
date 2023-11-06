@@ -12,6 +12,15 @@ jobs:
 
     steps:
       - checkout
+      - restore_cache:
+          name: Restore pnpm Package Cache
+          keys:
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install pnpm package manager
+          command: |
+            corepack enable
+            corepack prepare pnpm@latest-8 --activate
 
       - run:
           name: Installing Deployment Dependencies
@@ -33,36 +42,36 @@ jobs:
           name: yarn install
           command: rm yarn.lock; yarn install --network-timeout 1000000
 
-      - run:
-          name: Convert UTF8 Types
-          command: |
-            cd src/assets/
-            convmv -r -f utf8 -t utf8 --nfd --notest .;
+#       - run:
+#           name: Convert UTF8 Types
+#           command: |
+#             cd src/assets/
+#             convmv -r -f utf8 -t utf8 --nfd --notest .;
 
-      - run:
-          name: Build Library Zip
-          command: |
-            cd src/assets/documents
-            mkdir ../zip
-            zip -r ../zip/EOC\ Development\ Tool.zip *;
+#       - run:
+#           name: Build Library Zip
+#           command: |
+#             cd src/assets/documents
+#             mkdir ../zip
+#             zip -r ../zip/EOC\ Development\ Tool.zip *;
 
-      - run:
-          name: Build Spanish Library Zip
-          command: |
-            cd src/assets/spanish
-            zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
+#       - run:
+#           name: Build Spanish Library Zip
+#           command: |
+#             cd src/assets/spanish
+#             zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
 
-      - run:
-          name: Build Guides Zip
-          command: |
-            cd src/assets/guides
-            zip -r ../zip/EOC\ Development\ Tool\ Guidance.zip *;
+#       - run:
+#           name: Build Guides Zip
+#           command: |
+#             cd src/assets/guides
+#             zip -r ../zip/EOC\ Development\ Tool\ Guidance.zip *;
 
-      - run:
-          name: Build Subdirectory Zips
-          command: |
-            cd src/assets/documents/EOC\ Development\ Tool;
-            for i in */; do zip -r "../../zip/${i%/}.zip" "$i"; done
+#       - run:
+#           name: Build Subdirectory Zips
+#           command: |
+#             cd src/assets/documents/EOC\ Development\ Tool;
+#             for i in */; do zip -r "../../zip/${i%/}.zip" "$i"; done
 
       - run:
           name: yarn build
