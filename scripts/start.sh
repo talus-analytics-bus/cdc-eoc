@@ -19,7 +19,7 @@ export AIRTABLE_API_KEY=$(
   jq  -r .SecretString | jq -r .AIRTABLE_API_KEY\
 )
 
-if [ "$reset" == "1" ]; then 
+if [ "$reset" == "1" ]; then
   pnpm i;
   gatsby clean;
 fi
