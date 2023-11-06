@@ -56,9 +56,18 @@ const IndexPage = ({ data }) => {
         }`
       )
     )
-    const alpha = documents.sort((a, b) =>
-      displayNames[a.name + a.ext].localeCompare(displayNames[b.name + b.ext])
-    )
+    const alpha = documents.sort((a, b) => {
+      const nameA = displayNames[a.name + a.ext]
+      const nameB = displayNames[b.name + b.ext]
+      if (!nameA) {
+        throw new Error(`Display name not found for ${a.name + a.ext}`)
+      }
+      if (!nameB) {
+        throw new Error(`Display name not found for ${b.name + b.ext}`)
+      }
+      return nameA.localeCompare(nameB)
+    })
+
     const moduleDescription = alpha.find(document =>
       /^Module [1-9]/.test(displayNames[document.name + document.ext])
     )
