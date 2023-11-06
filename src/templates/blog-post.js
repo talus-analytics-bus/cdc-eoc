@@ -2,9 +2,11 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import unified from 'unified'
-import markdown from 'remark-parse'
-import html from 'remark-html'
+
+import { unified } from 'unified'
+import rehypeStringify from 'rehype-stringify'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
 
 import Layout from '../components/Layout/Layout'
 
@@ -89,8 +91,9 @@ export default function Template({
         <section
           dangerouslySetInnerHTML={{
             __html: unified()
-              .use(markdown)
-              .use(html)
+              .use(remarkParse)
+              .use(remarkRehype, { allowDangerousHtml: true })
+              .use(rehypeStringify, { allowDangerousHtml: true })
               .processSync(blogTextWithImages),
           }}
         />

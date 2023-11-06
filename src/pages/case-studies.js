@@ -3,9 +3,11 @@ import { renderToString } from 'react-dom/server'
 import { Helmet } from 'react-helmet'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Fuse from 'fuse.js'
-import unified from 'unified'
-import markdown from 'remark-parse'
-import html from 'remark-html'
+
+import { unified } from 'unified'
+import rehypeStringify from 'rehype-stringify'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
 
 import Layout from '../components/Layout/Layout'
 
@@ -88,15 +90,10 @@ const Blog = () => {
                   )
                 ) +
                 unified()
-                  .use(markdown)
-                  .use(html)
-                  .processSync(post.data.Excerpt)
-                  // Need to get just the text from the first paragraph
-                  .contents.split(/<\/p>/g)[0]
-                  .replace('<p>', '')
-                  .split(' ')
-                  .slice(0, 150)
-                  .join(' ') +
+                  .use(remarkParse)
+                  .use(remarkRehype, { allowDangerousHtml: true })
+                  .use(rehypeStringify, { allowDangerousHtml: true })
+                  .processSync(post.data.Excerpt) +
                 ' ' +
                 renderToString(
                   post.data.URL !== '#' && (
