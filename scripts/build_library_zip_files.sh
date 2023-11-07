@@ -2,7 +2,7 @@
 
 echo "Convert UTF8 Types"
 cd src/assets
-convmv -r -f utf8 -t utf8 --nfd --notest .;
+convmv -r -f utf8 -t utf8 --nfd --notest . || exit 1
 
 echo "Build Library Zip File"
 cd documents/

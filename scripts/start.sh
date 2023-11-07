@@ -20,9 +20,10 @@ export AIRTABLE_API_KEY=$(
 )
 
 if [ "$reset" == "1" ]; then
-  pnpm i;
+  npm i;
   gatsby clean;
-  rm -r src/assets/zip
+  echo "Remove zip files"
+  rm -r src/assets/zip;
 fi
 
 if [ "$clean" == "1" ]; then 
@@ -33,7 +34,7 @@ if [ -e src/assets/zip ]; then
   echo "Zip files already created"
   echo ""
 else
-  sh ./scripts/build_library_zip_files.sh
+  sh ./scripts/build_library_zip_files.sh || exit 1
 fi
 
 
