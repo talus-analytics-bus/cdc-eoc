@@ -48,7 +48,9 @@ jobs:
 
       - run:
           name: Install Convmv
-          command: sudo apt-get install convmv
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get install convmv
 
       - run:
           name: Install packages
