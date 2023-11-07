@@ -48,6 +48,8 @@ const IndexPage = ({ data }) => {
 
   directories.sort((a, b) => a.localeCompare(b))
 
+  const missingNames = new Set()
+
   const createDocElements = documents => {
     documents.forEach(doc =>
       console.log(
@@ -60,10 +62,14 @@ const IndexPage = ({ data }) => {
       const nameA = displayNames[a.name + a.ext]
       const nameB = displayNames[b.name + b.ext]
       if (!nameA) {
-        throw new Error(`Display name not found for ${a.name + a.ext}`)
+        missingNames.add(a.name + a.ext)
+        // throw new Error(`Display name not found for ${a.name + a.ext}`)
+        return -1
       }
       if (!nameB) {
-        throw new Error(`Display name not found for ${b.name + b.ext}`)
+        missingNames.add(b.name + b.ext)
+        // throw new Error(`Display name not found for ${b.name + b.ext}`)
+        return -1
       }
       return nameA.localeCompare(nameB)
     })

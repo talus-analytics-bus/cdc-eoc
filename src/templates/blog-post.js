@@ -4,17 +4,12 @@ import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 
 import { unified } from 'unified'
-// import rehypeStringify from 'rehype-stringify'
-// import remarkParse from 'remark-parse'
-// import remarkRehype from 'remark-rehype'
-
 import markdown from 'remark-parse'
 import html from 'remark-html'
 
 import Layout from '../components/Layout/Layout'
 
 import * as styles from '../styles/blog-post.module.scss'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query we'll write in a bit
@@ -23,15 +18,13 @@ export default function Template({
 
   const blogPostImage = filename => {
     const noBackslashes = filename.replace(/\\/g, '')
-    console.log(post.data.Additional_Images.localFiles)
-    console.log(noBackslashes)
     const imageData = post.data.Additional_Images.localFiles.find(
       img => img.name.replace('.', '') + img.ext === noBackslashes
     ).childImageSharp.gatsbyImageData
 
     return ReactDOMServer.renderToString(
-      <GatsbyImage
-        image={imageData}
+      <img
+        src={imageData.images.fallback.src}
         alt={`${filename}`}
         style={{ width: '100%' }}
       />
@@ -40,23 +33,14 @@ export default function Template({
 
   let blogTextWithImages = ''
 
-  console.log(
-    post.data.Additional_Images.localFiles[0].childImageSharp.gatsbyImageData
-  )
-
   if (post.data.Additional_Images.localFiles[0].childImageSharp) {
     const textSections = post.data.Blog_Text.split(/\[IMAGE: ".*"\]/g)
     const imageFileNames = [
       ...post.data.Blog_Text.matchAll(/\[IMAGE: "(.*)"\]/g),
     ]
 
-    console.log(imageFileNames)
-
     textSections.forEach((text, index) => {
-      console.log('hi')
       if (post.data.Additional_Images.localFiles[index]) {
-        console.log(post.data.Additional_Images[index])
-        console.log(blogPostImage(imageFileNames[index][1]))
         blogTextWithImages =
           blogTextWithImages + text + blogPostImage(imageFileNames[index][1])
       } else {
@@ -66,12 +50,6 @@ export default function Template({
   } else {
     blogTextWithImages = post.data.Blog_Text
   }
-
-  // console.log(post.data.Blog_Text)
-  // console.log(blogTextWithImages)
-  // console.log(
-  // unified().use(markdown).use(html).processSync(blogTextWithImages).contents
-  // )
 
   return (
     <Layout>
