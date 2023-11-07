@@ -47,6 +47,10 @@ jobs:
       - aws-cli/install
 
       - run:
+          name: Install Convmv
+          command: sudo apt-get install convmv
+
+      - run:
           name: Install packages
           command: npm i
 
