@@ -11,6 +11,7 @@ import remarkRehype from 'remark-rehype'
 import Layout from '../components/Layout/Layout'
 
 import * as styles from '../styles/blog-post.module.scss'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query we'll write in a bit
@@ -19,25 +20,40 @@ export default function Template({
 
   const blogPostImage = filename => {
     const noBackslashes = filename.replace(/\\/g, '')
-    const url = post.data.Additional_Images.find(
-      img => img.filename === noBackslashes
-    ).url
+    console.log(post.data.Additional_Images.localFiles)
+    console.log(noBackslashes)
+    const imageData = post.data.Additional_Images.localFiles.find(
+      img => img.name.replace('.', '') + img.ext === noBackslashes
+    ).childImageSharp.gatsbyImageData
 
     return ReactDOMServer.renderToString(
-      <img src={url} alt={`${filename}`} style={{ width: '100%' }} />
+      <GatsbyImage
+        image={imageData}
+        alt={`${filename}`}
+        style={{ width: '100%' }}
+      />
     )
   }
 
   let blogTextWithImages = ''
 
-  if (post.data.Additional_Images[0].url !== '') {
+  console.log(
+    post.data.Additional_Images.localFiles[0].childImageSharp.gatsbyImageData
+  )
+
+  if (post.data.Additional_Images.localFiles[0].childImageSharp) {
     const textSections = post.data.Blog_Text.split(/\[IMAGE: ".*"\]/g)
     const imageFileNames = [
       ...post.data.Blog_Text.matchAll(/\[IMAGE: "(.*)"\]/g),
     ]
 
+    console.log(imageFileNames)
+
     textSections.forEach((text, index) => {
-      if (post.data.Additional_Images[index]) {
+      console.log('hi')
+      if (post.data.Additional_Images.localFiles[index]) {
+        console.log(post.data.Additional_Images[index])
+        console.log(blogPostImage(imageFileNames[index][1]))
         blogTextWithImages =
           blogTextWithImages + text + blogPostImage(imageFileNames[index][1])
       } else {
@@ -110,13 +126,20 @@ export const pageQuery = graphql`
         Blog_Text
         Date
         Cover_Image {
-          id
-          # url
+          localFiles {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         Additional_Images {
-          id
-          # filename
-          # url
+          localFiles {
+            name
+            ext
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         URL
         Title

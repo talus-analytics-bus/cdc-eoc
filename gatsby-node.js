@@ -26,7 +26,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             data {
               Blog_Text
               Cover_Image {
-                url
+                localFiles {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
               }
               Author
               Category
@@ -43,6 +47,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
+
+  console.log(result.data.allAirtable.edges)
   // printing out paths to make it easy to copy / paste for the invalidation
   // console.log('blog post paths')
   result.data.allAirtable.edges.forEach(({ node }) => {

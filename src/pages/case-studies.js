@@ -12,6 +12,7 @@ import remarkRehype from 'remark-rehype'
 import Layout from '../components/Layout/Layout'
 
 import * as styles from '../styles/case-studies.module.scss'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -30,8 +31,11 @@ const Blog = () => {
               Blog_Text
               Excerpt
               Cover_Image {
-                # url
-                id
+                localFiles {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
               }
               Author
               Category
@@ -83,10 +87,23 @@ const Blog = () => {
                 renderToString(
                   post.data.URL !== '#' && (
                     <Link to={post.data.URL}>
-                      <img
-                        src={post.data.Cover_Image[0].url}
+                      {console.log(
+                        post.data.Cover_Image.localFiles[0].childImageSharp
+                          .gatsbyImageData
+                      )}
+                      <GatsbyImage
+                        image={
+                          post.data.Cover_Image.localFiles[0].childImageSharp
+                            .gatsbyImageData
+                        }
                         alt={post.data.Title}
                       />
+                      {
+                        // <img
+                        //   src={post.data.Cover_Image[0].url}
+                        //   alt={post.data.Title}
+                        // />
+                      }
                     </Link>
                   )
                 ) +

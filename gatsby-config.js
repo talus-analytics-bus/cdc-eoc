@@ -44,9 +44,9 @@ module.exports = {
               Additional_Images: `fileNode`,
               Cover_Image: `fileNode`,
             },
-            defaultValues: {
-              Additional_Images: [{ filename: '', url: '' }],
-            },
+            // defaultValues: {
+            //   Additional_Images: [{ filename: '', url: '' }],
+            // },
           },
         ],
       },
