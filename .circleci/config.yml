@@ -27,7 +27,7 @@ workflows:
                 - dev
 
 orbs:
-  aws-cli: circleci/aws-cli@0.1.13
+  aws-cli: circleci/aws-cli@2.0.3
 
 jobs:
   deploy:
@@ -45,7 +45,6 @@ jobs:
     steps:
       - checkout
       - aws-cli/install
-      - aws-cli/configure
 
       - run:
           name: Install packages
