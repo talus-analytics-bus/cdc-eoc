@@ -35,6 +35,7 @@
     "unified": "^10.1.1"
   },
   "devDependencies": {
+    "csv-loader": "^3.0.5",
     "prettier": "3.0.3"
   },
   "keywords": [

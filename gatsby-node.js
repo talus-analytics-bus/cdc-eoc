@@ -69,6 +69,15 @@ exports.onCreateWebpackConfig = ({ actions }) => {
           test: /\.html$/i,
           loader: 'html-loader',
         },
+        {
+          test: /\.csv$/,
+          loader: 'csv-loader',
+          options: {
+            dynamicTyping: true,
+            header: true,
+            skipEmptyLines: true,
+          },
+        },
       ],
     },
   })
