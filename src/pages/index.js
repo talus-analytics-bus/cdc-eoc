@@ -32,10 +32,18 @@ const IndexPage = ({ data }) => {
   // )
   const directories = [
     ...new Set(data.allFile.nodes.map(node => node.relativeDirectory)),
-  ].filter(dir => !['', 'zip', 'guides', 'spanish'].includes(dir))
+  ].filter(dir => dir.startsWith('documents/'))
 
   const spanishFiles = data.allFile.nodes.filter(
-    file => file.relativeDirectory === 'spanish'
+    file => file.relativeDirectory === 'All Spanish'
+  )
+
+  const frenchFiles = data.allFile.nodes.filter(
+    file => file.relativeDirectory === 'All French'
+  )
+
+  const russianFiles = data.allFile.nodes.filter(
+    file => file.relativeDirectory === 'All Russian'
   )
 
   const zipfiles = data.allFile.nodes.filter(
@@ -92,51 +100,65 @@ const IndexPage = ({ data }) => {
       ...(moduleDescriptionES ? [moduleDescriptionES] : []),
       ...otherDocuments,
     ]
-    return sorted.map(document => (
-      <OutboundLink
-        href={document.publicURL}
-        aria-label="Download"
-        key={document.name}
-        className={styles.document}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {/* {console.log(document.name)} */}
-        <span className={styles[document.ext.replace('.', '')]}></span>
-        <p className={styles.displayName}>
-          {trimString(
-            displayNames[document.name + document.ext],
-            displayNames[document.name + document.ext] +
-              document.name +
-              document.ext
-          )}
-          {/* console.log(document.name) */}
-          {/* {document.name */}
-          {/*   .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ') */}
-          {/*   .replace(/eoc/g, 'EOC') */}
-          {/*   .replace(/ics/g, 'ICS') */}
-          {/*   .replace(/cdc/g, 'CDC')} */}
-        </p>
-        <p className={styles.fileName}>
-          {trimString(
-            document.name,
-            displayNames[document.name + document.ext] +
-              document.name +
-              document.ext
-          )}
-          {document.ext}
-        </p>
-        <p>{document.prettySize}</p>
-      </OutboundLink>
-    ))
+    return (
+      sorted
+        // skip documents with no display name temporarily
+        .filter(doc => Boolean(doc))
+        .map(document => (
+          <OutboundLink
+            href={document.publicURL}
+            aria-label="Download"
+            key={document.name}
+            className={styles.document}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {/* {console.log(document.name)} */}
+            <span className={styles[document.ext.replace('.', '')]}></span>
+            <p className={styles.displayName}>
+              {trimString(
+                displayNames[document.name + document.ext],
+                displayNames[document.name + document.ext] +
+                  document.name +
+                  document.ext
+              )}
+              {/* console.log(document.name) */}
+              {/* {document.name */}
+              {/*   .replace(/(_|doc|ppt|[0-9]|tool)/g, ' ') */}
+              {/*   .replace(/eoc/g, 'EOC') */}
+              {/*   .replace(/ics/g, 'ICS') */}
+              {/*   .replace(/cdc/g, 'CDC')} */}
+            </p>
+            <p className={styles.fileName}>
+              {trimString(
+                document.name,
+                displayNames[document.name + document.ext] +
+                  document.name +
+                  document.ext
+              )}
+              {document.ext}
+            </p>
+            <p>{document.prettySize}</p>
+          </OutboundLink>
+        ))
+    )
   }
+
+  console.log(directories)
+  console.log(zipfiles)
 
   const categoryElements = directories.map(directory => {
     const documents = data.allFile.nodes.filter(
       node => node.relativeDirectory === directory
     )
+
+    console.log(documents)
+
     const sectionName = directory.split('/').pop()
+    console.log(sectionName)
     const zip = zipfiles.find(zip => zip.name === sectionName)
+
+    console.log(zip)
 
     return (
       <Category key={directory.split('/').pop()}>
@@ -176,6 +198,18 @@ const IndexPage = ({ data }) => {
     node =>
       (node.relativeDirectory === 'zip') &
       (node.name === 'EOC Development Tool Spanish')
+  )
+
+  const frenchZip = data.allFile.nodes.find(
+    node =>
+      (node.relativeDirectory === 'zip') &
+      (node.name === 'EOC Development Tool French')
+  )
+
+  const russianZip = data.allFile.nodes.find(
+    node =>
+      (node.relativeDirectory === 'zip') &
+      (node.name === 'EOC Development Tool Russian')
   )
 
   return (
@@ -247,6 +281,14 @@ const IndexPage = ({ data }) => {
             <OutboundLink href={spanishZip.publicURL}>
               Descarga todos en Español ({spanishFiles.length} files,{' '}
               {spanishZip.prettySize} .zip)
+            </OutboundLink>
+            <OutboundLink href={frenchZip.publicURL}>
+              Descarga todos en Francés ({frenchFiles.length} files,{' '}
+              {frenchZip.prettySize} .zip)
+            </OutboundLink>
+            <OutboundLink href={russianZip.publicURL}>
+              Descarga todos en Ruso ({russianFiles.length} files,{' '}
+              {russianZip.prettySize} .zip)
             </OutboundLink>
           </div>
         </header>
