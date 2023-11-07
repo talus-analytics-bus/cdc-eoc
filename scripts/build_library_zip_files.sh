@@ -8,12 +8,19 @@ mkdir ../zip
 zip -r ../zip/EOC\ Development\ Tool.zip *;
 
 echo "Build Spanish Library Zip File"
-cd ../documents-spanish/
+cd ../All\ Spanish/
 zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
 
+echo "Build French Library Zip File"
+cd ../All\ French/
+zip -r ../zip/EOC\ Development\ Tool\ French.zip *;
+
+echo "Build Russian Library Zip File"
+cd ../All\ Russian/
+zip -r ../zip/EOC\ Development\ Tool\ Russian.zip *;
 
 echo "Build Guides Zip Files"
-cd ../guides/
+cd ../guides_EN/
 zip -r ../zip/EOC\ Development\ Tool\ Guidance.zip *;
 
 echo "Build Subdirectory Zip Files"
