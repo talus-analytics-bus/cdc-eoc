@@ -43,10 +43,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "scripts/build.sh",
+    "build": "scripts/build.sh --clean",
     "dev": "scripts/start.sh",
-    "develop": "scripts/start.sh",
-    "start": "scripts/start.sh",
+    "develop": "scripts/start.sh --clean",
+    "start": "scripts/start.sh --clean",
     "clean": "gatsby clean"
   },
   "repository": {

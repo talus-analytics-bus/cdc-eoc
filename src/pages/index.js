@@ -207,13 +207,13 @@ const IndexPage = ({ data }) => {
       (node.name === 'EOC Development Tool Russian')
   )
 
-  console.error(missingNames)
+  // console.error(missingNames)
 
-  // if (missingNames.size > 0) {
-  //   throw new Error(
-  //     `Display names not found for ${Array.from(missingNames).join(', ')}`
-  //   )
-  // }
+  if (missingNames.size > 0) {
+    throw new Error(
+      `Display names not found for ${Array.from(missingNames).join(', ')}`
+    )
+  }
 
   return (
     <Layout>
