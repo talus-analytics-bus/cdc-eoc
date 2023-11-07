@@ -1,7 +1,33 @@
 version: 2.1
 
+credentials: &credentials
+  - AWS Credentials
+  - Airtable Credentials
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - deploy:
+          bucket: 's3://cdc-eoc/'
+          distribution: 'E1M82XI9UK5PMB'
+          context: *credentials
+          filters:
+            branches:
+              only:
+                - master
+
+      - deploy:
+          bucket: 's3://cdc-eoc-dev/'
+          distribution: 'E122Z7UCYXWTES'
+          context: *credentials
+          filters:
+            branches:
+              only:
+                - dev
+
 orbs:
-  aws-cli: circleci/aws-cli@0.1.13
+  aws-cli: circleci/aws-cli@2.0.3
 
 jobs:
   deploy:
@@ -10,176 +36,38 @@ jobs:
     docker:
       - image: cimg/node:lts
 
-    steps:
-      - checkout
-
-      - run:
-          name: Installing Deployment Dependencies
-          working_directory: /
-          command: |
-            sudo apt-get -y -qq update
-            sudo apt-get install convmv
-            sudo apt-get -y install python3-pip python3-dev g++ build-essential
-            pip3 install --upgrade pip
-            sudo apt-get remove python-pip
-            pip3 install --upgrade setuptools pytz
-            pip3 install awsebcli==3.10.0
-            pip3 install boto3
-
-      - aws-cli/install
-      - aws-cli/configure
-
-      - run:
-          name: yarn install
-          command: rm yarn.lock; yarn install --network-timeout 1000000
-
-      - run:
-          name: Convert UTF8 Types
-          command: |
-            cd src/assets/
-            convmv -r -f utf8 -t utf8 --nfd --notest .;
-
-      - run:
-          name: Build Library Zip
-          command: |
-            cd src/assets/documents
-            mkdir ../zip
-            zip -r ../zip/EOC\ Development\ Tool.zip *;
-
-      - run:
-          name: Build Spanish Library Zip
-          command: |
-            cd src/assets/spanish
-            zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
-
-      - run:
-          name: Build Guides Zip
-          command: |
-            cd src/assets/guides
-            zip -r ../zip/EOC\ Development\ Tool\ Guidance.zip *;
-
-      - run:
-          name: Build Subdirectory Zips
-          command: |
-            cd src/assets/documents/EOC\ Development\ Tool;
-            for i in */; do zip -r "../../zip/${i%/}.zip" "$i"; done
-
-      - run:
-          name: yarn build
-          command: yarn build
-
-      - run:
-          name: deploy
-          command: aws s3 sync public/ s3://cdc-eoc/ --delete
-
-      - run:
-          name: invalidate index.html
-          command: |
-            aws cloudfront create-invalidation \
-            --distribution-id E1M82XI9UK5PMB \
-            --paths \
-            "/*"
-
-      - run:
-          name: Notify Slack
-          command: |
-            curl -X POST -H 'Content-type: application/json' --data '{"text":"http://cdc-eoc.s3-website-us-east-1.amazonaws.com/"}' \
-            https://hooks.slack.com/services/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
-
-  deploy-dev:
-    working_directory: ~/repo
-
-    docker:
-      - image: cimg/node:lts
+    parameters:
+      bucket:
+        type: string
+      distribution:
+        type: string
 
     steps:
       - checkout
+      - aws-cli/install
 
       - run:
-          name: Installing Deployment Dependencies
-          working_directory: /
+          name: Install Convmv
           command: |
             sudo apt-get -y -qq update
             sudo apt-get install convmv
-            sudo apt-get -y install python3-pip python3-dev g++ build-essential
-            pip3 install --upgrade pip
-            sudo apt-get remove python-pip
-            pip3 install --upgrade setuptools pytz
-            pip3 install awsebcli==3.10.0
-            pip3 install boto3
-
-      - aws-cli/install
-      - aws-cli/configure
 
       - run:
-          name: yarn install
-          command: rm yarn.lock; yarn install --network-timeout 1000000
+          name: Install packages
+          command: npm i
 
       - run:
-          name: Convert UTF8 Types
-          command: |
-            cd src/assets/
-            convmv -r -f utf8 -t utf8 --nfd --notest .;
+          name: Build Site
+          command: npm run build
 
       - run:
-          name: Build Library Zip
-          command: |
-            cd src/assets/documents
-            mkdir ../zip
-            zip -r ../zip/EOC\ Development\ Tool.zip *;
+          name: Sync to Bucket
+          command: aws s3 sync public/ <<parameters.bucket>> --delete
 
       - run:
-          name: Build Spanish Library Zip
-          command: |
-            cd src/assets/spanish
-            zip -r ../zip/EOC\ Development\ Tool\ Spanish.zip *;
-
-      - run:
-          name: Build Guides Zip
-          command: |
-            cd src/assets/guides
-            zip -r ../zip/EOC\ Development\ Tool\ Guidance.zip *;
-
-      - run:
-          name: Build Subdirectory Zips
-          command: |
-            cd src/assets/documents/EOC\ Development\ Tool;
-            for i in */; do zip -r "../../zip/${i%/}.zip" "$i"; done
-
-      - run:
-          name: yarn build
-          command: yarn build
-
-      - run:
-          name: deploy
-          command: aws s3 sync public/ s3://cdc-eoc-dev/ --delete
-
-      - run:
-          name: invalidate index.html
+          name: Run CloudFront Invalidation
           command: |
             aws cloudfront create-invalidation \
-            --distribution-id E122Z7UCYXWTES \
+            --distribution-id <<parameters.distribution>> \
             --paths \
             "/*"
-
-      - run:
-          name: Notify Slack
-          command: |
-            curl -X POST -H 'Content-type: application/json' --data '{"text":"http://cdc-eoc-dev.s3-website-us-east-1.amazonaws.com"}' \
-            https://hooks.slack.com/services/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
-
-workflows:
-  version: 2
-  build:
-    jobs:
-      - deploy:
-          filters:
-            branches:
-              only:
-                - master
-
-      - deploy-dev:
-          filters:
-            branches:
-              only:
-                - dev

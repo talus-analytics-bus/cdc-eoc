@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import unified from 'unified'
+
+import { unified } from 'unified'
 import markdown from 'remark-parse'
 import html from 'remark-html'
 
@@ -17,25 +18,29 @@ export default function Template({
 
   const blogPostImage = filename => {
     const noBackslashes = filename.replace(/\\/g, '')
-    const url = post.data.Additional_Images.find(
-      img => img.filename === noBackslashes
-    ).url
+    const imageData = post.data.Additional_Images.localFiles.find(
+      img => img.name.replace('.', '') + img.ext === noBackslashes
+    ).childImageSharp.gatsbyImageData
 
     return ReactDOMServer.renderToString(
-      <img src={url} alt={`${filename}`} style={{ width: '100%' }} />
+      <img
+        src={imageData.images.fallback.src}
+        alt={`${filename}`}
+        style={{ width: '100%' }}
+      />
     )
   }
 
   let blogTextWithImages = ''
 
-  if (post.data.Additional_Images[0].url !== '') {
+  if (post.data.Additional_Images.localFiles[0].childImageSharp) {
     const textSections = post.data.Blog_Text.split(/\[IMAGE: ".*"\]/g)
     const imageFileNames = [
       ...post.data.Blog_Text.matchAll(/\[IMAGE: "(.*)"\]/g),
     ]
 
     textSections.forEach((text, index) => {
-      if (post.data.Additional_Images[index]) {
+      if (post.data.Additional_Images.localFiles[index]) {
         blogTextWithImages =
           blogTextWithImages + text + blogPostImage(imageFileNames[index][1])
       } else {
@@ -45,12 +50,6 @@ export default function Template({
   } else {
     blogTextWithImages = post.data.Blog_Text
   }
-
-  // console.log(post.data.Blog_Text)
-  // console.log(blogTextWithImages)
-  // console.log(
-  // unified().use(markdown).use(html).processSync(blogTextWithImages).contents
-  // )
 
   return (
     <Layout>
@@ -90,8 +89,12 @@ export default function Template({
           dangerouslySetInnerHTML={{
             __html: unified()
               .use(markdown)
-              .use(html)
+              .use(html, { sanitize: false })
               .processSync(blogTextWithImages),
+            // .use(remarkParse)
+            // .use(remarkRehype, { allowDangerousHtml: true })
+            // .use(rehypeStringify, { allowDangerousHtml: true })
+            // .processSync(blogTextWithImages),
           }}
         />
       </article>
@@ -107,11 +110,20 @@ export const pageQuery = graphql`
         Blog_Text
         Date
         Cover_Image {
-          url
+          localFiles {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         Additional_Images {
-          filename
-          url
+          localFiles {
+            name
+            ext
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         URL
         Title

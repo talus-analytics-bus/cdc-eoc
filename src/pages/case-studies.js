@@ -3,7 +3,12 @@ import { renderToString } from 'react-dom/server'
 import { Helmet } from 'react-helmet'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Fuse from 'fuse.js'
-import unified from 'unified'
+
+import { unified } from 'unified'
+// import rehypeStringify from 'rehype-stringify'
+// import remarkParse from 'remark-parse'
+// import remarkRehype from 'remark-rehype'
+
 import markdown from 'remark-parse'
 import html from 'remark-html'
 
@@ -19,7 +24,7 @@ const Blog = () => {
           data: { Publishing_Status: { eq: "Publish" } }
           table: { eq: "Case Studies" }
         }
-        sort: { order: DESC, fields: data___Date }
+        sort: { data: { Date: DESC } }
       ) {
         edges {
           node {
@@ -28,7 +33,11 @@ const Blog = () => {
               Blog_Text
               Excerpt
               Cover_Image {
-                url
+                localFiles {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
               }
               Author
               Category
@@ -81,7 +90,10 @@ const Blog = () => {
                   post.data.URL !== '#' && (
                     <Link to={post.data.URL}>
                       <img
-                        src={post.data.Cover_Image[0].url}
+                        src={
+                          post.data.Cover_Image.localFiles[0].childImageSharp
+                            .gatsbyImageData.images.fallback.src
+                        }
                         alt={post.data.Title}
                       />
                     </Link>
@@ -89,14 +101,12 @@ const Blog = () => {
                 ) +
                 unified()
                   .use(markdown)
-                  .use(html)
-                  .processSync(post.data.Excerpt)
-                  // Need to get just the text from the first paragraph
-                  .contents.split(/<\/p>/g)[0]
-                  .replace('<p>', '')
-                  .split(' ')
-                  .slice(0, 150)
-                  .join(' ') +
+                  .use(html, { sanitize: false })
+                  .processSync(post.data.Excerpt) +
+                // .use(remarkParse)
+                // .use(remarkRehype, { allowDangerousHtml: true })
+                // .use(rehypeStringify, { allowDangerousHtml: true })
+                // .processSync(post.data.Excerpt) +
                 ' ' +
                 renderToString(
                   post.data.URL !== '#' && (

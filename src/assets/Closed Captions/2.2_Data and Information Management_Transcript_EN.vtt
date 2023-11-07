@@ -1,0 +1,226 @@
+WEBVTT
+
+1
+00:00:01.500 --> 00:00:12.420
+Claire Standley (she/her): hello, my name is Claire Stanley and i'm going to talk to you today a little bit about data and information management, especially in the context of emergency operation centers during epidemic responses.
+
+2
+00:00:14.580 --> 00:00:25.350
+Claire Standley (she/her): So how do we define these terms, so when we talk about data and information management or referring to the process of collecting, storing organizing and visualizing data and information.
+
+3
+00:00:25.680 --> 00:00:32.160
+Claire Standley (she/her): This is incredibly important in the context of any type of emergency operation Center including PHEOCs
+
+4
+00:00:32.490 --> 00:00:43.110
+Claire Standley (she/her): Because it supports decision making, through preparedness response recovery. Those data are used to inform decision making and that's what's going to be critical to any PHEOC operation.
+
+5
+00:00:45.060 --> 00:01:00.270
+Claire Standley (she/her): In emergency situations in particular there's often an increase in epidemiologic and laboratory resources, especially during the response phase and, with that increase in in resources and activity, there is often a corresponding increase in data.
+
+6
+00:01:01.290 --> 00:01:10.290
+Claire Standley (she/her): To that, and there can be constraints related to the amount of time that personnel, how to process these data, especially if there is an increase in the amount of data coming in.
+
+7
+00:01:11.160 --> 00:01:19.050
+Claire Standley (she/her): The pressure to summarize larger than ordinary amounts of data, but perhaps analyze them in different ways.
+
+8
+00:01:19.530 --> 00:01:31.110
+Claire Standley (she/her): As I just mentioned, this may be particularly challenging if your personnel are limited, in any way, either because of the scale of the response, or as we've seen in many situations during the COVID 19 pandemic.
+
+9
+00:01:31.470 --> 00:01:37.650
+Claire Standley (she/her): If personnel are forced to self isolate after exposures or themselves may become ill during an emergency situation.
+
+10
+00:01:38.790 --> 00:01:48.150
+Claire Standley (she/her): Another major challenge, and one which can be prepared or mitigated against is insufficient data preparedness infrastructure, so ensuring that there's a robust
+
+11
+00:01:48.690 --> 00:02:01.500
+Claire Standley (she/her): infrastructure in place in the PHEOC for managing data, and  collecting and analyzing it in ways that are appropriate to the mission and mandate of that PHEOC can be really helpful.
+
+12
+00:02:02.010 --> 00:02:10.650
+Claire Standley (she/her): And then, finally, depending on the scale and scope of the emergency response and perhaps even the jurisdictions or sectors that are involved in that response.
+
+13
+00:02:11.040 --> 00:02:28.140
+Claire Standley (she/her): A PHEOC may be forced to confront unfamiliar field deployment locations and logistics, adding different types of data or different partners with which share information, you can also complicate the ways that data collection is is affected in the future, and how those data.
+
+14
+00:02:31.020 --> 00:02:42.270
+Claire Standley (she/her): To this end and referring specifically back to that concept of ensuring from data for preparedness and the correct infrastructure to handle the types of data that the PHEOC needs to manage.
+
+15
+00:02:43.080 --> 00:02:52.620
+Claire Standley (she/her): There are many tools and technologies that are available at your disposal and selecting them is going to depend, as mentioned on the mission and mandate of the specific facility.
+
+16
+00:02:52.950 --> 00:03:01.980
+Claire Standley (she/her): That might differ at a local level emergency operation Center or county level depending on your context versus a national or perhaps even regional Center.
+
+17
+00:03:02.430 --> 00:03:05.790
+Claire Standley (she/her): And so, choosing the right tool is going to be important.
+
+18
+00:03:06.300 --> 00:03:22.260
+Claire Standley (she/her): In that these tools have to directly support the workflow of the investigations that are being coordinated by the PHEOC, and any other types of operational or planning activities so from an epidemiology side, for example, the tool should allow epidemiologist to
+
+19
+00:03:23.520 --> 00:03:33.600
+Claire Standley (she/her): accurately identify the correct data sources and acquire it into their own data systems, clean the data and then of course analyze the data to better characterize events.
+
+20
+00:03:34.080 --> 00:03:39.150
+Claire Standley (she/her): And it should allow epidemiologist to monitor the progress of pandemic or outbreak.
+
+21
+00:03:39.570 --> 00:03:50.880
+Claire Standley (she/her): And also ensure that there's opportunities from monitoring the implementation and effectiveness of control measures we need to know that the activities, the response activities that are being coordinated by the PHEOC
+
+22
+00:03:51.120 --> 00:03:56.250
+Claire Standley (she/her): are actually having desired impact and that can be achieved through good data collection and management.
+
+23
+00:03:57.780 --> 00:04:00.810
+Claire Standley (she/her): On the laboratory side, for example, it can help to
+
+24
+00:04:02.100 --> 00:04:08.880
+Claire Standley (she/her): collate test results and also share them with relevant stakeholders, including those in the surveillance side of the public health system.
+
+25
+00:04:10.710 --> 00:04:15.780
+Claire Standley (she/her): As noted data collection itself can be done in lots of different ways, and these may vary
+
+26
+00:04:16.110 --> 00:04:23.520
+Claire Standley (she/her): Depending on the resources that are available to you, but also on your national health system so in many places
+
+27
+00:04:23.850 --> 00:04:29.190
+Claire Standley (she/her): data are still collected by paper forms, and this can be done because of their routine questionnaires or.
+
+28
+00:04:29.400 --> 00:04:43.740
+Claire Standley (she/her): Other types of surveys that are done to assess an epidemiological situation or obviously in an emergency response situation, it could be a state of contact tracing data or many other types of information that could be processed and managed by the PHEOC.
+
+29
+00:04:44.880 --> 00:04:52.800
+Claire Standley (she/her): Increasingly we're seeing the use of Internet based or cloud based tool for data collection, this could be survey monkey, Google forms.
+
+30
+00:04:53.610 --> 00:05:02.640
+Claire Standley (she/her): social media, even as another way of collecting data and then of course there's more formalized systems like the national surveillance system which could be again paper based.
+
+31
+00:05:03.120 --> 00:05:11.730
+Claire Standley (she/her): But increasingly are shifting towards electronic systems such the DHIS2 system which is being used by dozens of countries around the world.
+
+32
+00:05:12.510 --> 00:05:17.490
+Claire Standley (she/her): We mentioned previously, the link with laboratory data, so the laboratory system may be sending.
+
+33
+00:05:18.000 --> 00:05:29.010
+Claire Standley (she/her): information to the PHEOC again potentially on paper forms or through the national health information system or there may be a separate laboratory information system that's used for for sharing those case data.
+
+34
+00:05:29.640 --> 00:05:37.920
+Claire Standley (she/her): And then finally many healthcare systems have electronic health record systems, which again could provide another sources useful information for the PHEOC.
+
+35
+00:05:38.250 --> 00:05:47.610
+Claire Standley (she/her): When tracking and neither emerging public health event or trying to monitor how an existing epidemic situation will public health emergencies involving.
+
+36
+00:05:50.310 --> 00:06:04.320
+Claire Standley (she/her): Once the data is in the PHEOC there needs to be a way to manage it to come in store and organize it so that it can be used effectively for analysis and then ultimately to inform decision making, or for risk communication purposes.
+
+37
+00:06:04.680 --> 00:06:14.220
+Claire Standley (she/her): There are many types of software that are out there, and for this purpose, some are open access and freely available without charge, others may require subscription so it's worth again.
+
+38
+00:06:14.850 --> 00:06:31.800
+Claire Standley (she/her): Making sure that those tools match the scope scale mandate and mission of the PHEOC,  as well as the available resources to ensure sustainability and such that there isn't some sort of financial gap down the road through trying to maintain say a subscription base.
+
+39
+00:06:34.380 --> 00:06:39.960
+Claire Standley (she/her): And some of the tools that we mentioned here are quite basic statistical tools, of course, one of the most powerful.
+
+40
+00:06:40.230 --> 00:06:56.280
+Claire Standley (she/her): data analysis techniques can just be manipulation basic manipulation of data to look for underlying trends visualization tools even simple ones to say excel can be very helpful to a PHEOC to understand the trends in the epidemiological context.
+
+41
+00:06:58.440 --> 00:07:01.050
+Claire Standley (she/her): And then, finally I mentioned this a second ago but.
+
+42
+00:07:01.440 --> 00:07:11.280
+Claire Standley (she/her): A next step, often with analysis is the data visualization stuff so taking those data and presenting them in a way that allows you to form new ideas about patterns trends.
+
+43
+00:07:11.550 --> 00:07:16.860
+Claire Standley (she/her): And also present the results in such a way that they can be used more effectively to informed decision making.
+
+44
+00:07:17.640 --> 00:07:24.390
+Claire Standley (she/her): dashboards are particularly popular for this type of technology you've seen them used a lot during the COVID-19 pandemic.
+
+45
+00:07:24.750 --> 00:07:40.980
+Claire Standley (she/her): A few examples have been listed here and an additional one that I would mention, will be the world and data, the our world and data, excuse me dashboards that are available on the Internet, which presents an enormous amount of COVID 19 related data into any case reported cases, numbers.
+
+46
+00:07:42.480 --> 00:07:49.140
+Claire Standley (she/her): Testing statistics, the vaccination coverage across almost every country in the world, and again they present those data.
+
+47
+00:07:49.410 --> 00:07:59.820
+Claire Standley (she/her): In different forms of charts and you can really see how those different visualizations provide different than the place into the data and allow for an analysis of trends or observations of other ones.
+
+48
+00:08:00.900 --> 00:08:11.550
+Claire Standley (she/her): Have implicated and impacted or informed the pandemic response and, as I mentioned a quick word for GIs mapping software again, especially in terms of tracking.
+
+49
+00:08:12.330 --> 00:08:23.010
+Claire Standley (she/her): The geographical extension to an emerging public health event geospatial data analysis and visualization can be incredibly powerful tool.
+
+50
+00:08:23.610 --> 00:08:30.810
+Claire Standley (she/her): When you have to reference data, you can put it in a particular geographical location and you can actually see on a map, then how.
+
+51
+00:08:31.320 --> 00:08:36.840
+Claire Standley (she/her): Different variables may relate to each other when it comes to managing the epidemic situation.
+
+52
+00:08:37.560 --> 00:08:48.420
+Claire Standley (she/her): So that's just a very brief overview of some of the tools and technologies that are available for data collection and management and many of these can be applied very easily and directly to a PHEOC,
+
+53
+00:08:48.960 --> 00:08:55.200
+Claire Standley (she/her): Again, going back to that fundamental principle of always trying to make sure that the tools that you are using in the PHEIC
+
+54
+00:08:55.470 --> 00:09:03.210
+Claire Standley (she/her): are suitable and and well aligned to the mission and mandate of the PHEOC, as well as its scale, scope and available resources.
+
+55
+00:09:03.810 --> 00:09:13.740
+Claire Standley (she/her): So with that hopefully this is giving you a brief overview into how there are different ways to collect and manage data and information in the context of the PHEOC,
+
+56
+00:09:14.070 --> 00:09:32.250
+Claire Standley (she/her): And then use that information for decision making and transform the operations of the EOC. Here are a few references for further reading and their continued on the next slide as well, thank you very much, and hope that was helpful overview into this topic.
+

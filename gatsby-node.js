@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -17,7 +18,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           data: { Publishing_Status: { eq: "Publish" } }
           table: { eq: "Case Studies" }
         }
-        sort: { order: DESC, fields: data___Date }
+        sort: { data: { Date: DESC } }
       ) {
         edges {
           node {
@@ -25,7 +26,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             data {
               Blog_Text
               Cover_Image {
-                url
+                localFiles {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
               }
               Author
               Category
@@ -42,6 +47,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
+
   // printing out paths to make it easy to copy / paste for the invalidation
   // console.log('blog post paths')
   result.data.allAirtable.edges.forEach(({ node }) => {
@@ -55,19 +61,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({
-  stage,
-  rules,
-  loaders,
-  plugins,
-  actions,
-}) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     module: {
       rules: [
         {
           test: /\.html$/i,
           loader: 'html-loader',
+        },
+        {
+          test: /\.csv$/,
+          loader: 'csv-loader',
+          options: {
+            dynamicTyping: true,
+            header: true,
+            skipEmptyLines: true,
+          },
         },
       ],
     },

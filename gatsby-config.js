@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 module.exports = {
   siteMetadata: {
     title: `CDC EOC Resource Portal`,
@@ -7,6 +9,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,9 +43,13 @@ module.exports = {
           {
             baseId: `appnl2vE0dDc6adYa`,
             tableName: `Case Studies`,
-            defaultValues: {
-              Additional_Images: [{ filename: '', url: '' }],
+            mapping: {
+              Additional_Images: `fileNode`,
+              Cover_Image: `fileNode`,
             },
+            // defaultValues: {
+            //   Additional_Images: [{ filename: '', url: '' }],
+            // },
           },
         ],
       },
