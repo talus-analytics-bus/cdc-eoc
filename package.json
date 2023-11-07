@@ -44,10 +44,10 @@
   "license": "MIT",
   "scripts": {
     "build": "scripts/build.sh",
+    "dev": "scripts/start.sh",
     "develop": "scripts/start.sh",
-    "start": "gatsby develop",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "start": "scripts/start.sh",
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
