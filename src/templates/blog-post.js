@@ -4,9 +4,12 @@ import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 
 import { unified } from 'unified'
-import rehypeStringify from 'rehype-stringify'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
+// import rehypeStringify from 'rehype-stringify'
+// import remarkParse from 'remark-parse'
+// import remarkRehype from 'remark-rehype'
+
+import markdown from 'remark-parse'
+import html from 'remark-html'
 
 import Layout from '../components/Layout/Layout'
 
@@ -107,10 +110,13 @@ export default function Template({
         <section
           dangerouslySetInnerHTML={{
             __html: unified()
-              .use(remarkParse)
-              .use(remarkRehype, { allowDangerousHtml: true })
-              .use(rehypeStringify, { allowDangerousHtml: true })
+              .use(markdown)
+              .use(html, { sanitize: false })
               .processSync(blogTextWithImages),
+            // .use(remarkParse)
+            // .use(remarkRehype, { allowDangerousHtml: true })
+            // .use(rehypeStringify, { allowDangerousHtml: true })
+            // .processSync(blogTextWithImages),
           }}
         />
       </article>

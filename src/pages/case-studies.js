@@ -5,9 +5,12 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Fuse from 'fuse.js'
 
 import { unified } from 'unified'
-import rehypeStringify from 'rehype-stringify'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
+// import rehypeStringify from 'rehype-stringify'
+// import remarkParse from 'remark-parse'
+// import remarkRehype from 'remark-rehype'
+
+import markdown from 'remark-parse'
+import html from 'remark-html'
 
 import Layout from '../components/Layout/Layout'
 
@@ -108,10 +111,13 @@ const Blog = () => {
                   )
                 ) +
                 unified()
-                  .use(remarkParse)
-                  .use(remarkRehype, { allowDangerousHtml: true })
-                  .use(rehypeStringify, { allowDangerousHtml: true })
+                  .use(markdown)
+                  .use(html, { sanitize: false })
                   .processSync(post.data.Excerpt) +
+                // .use(remarkParse)
+                // .use(remarkRehype, { allowDangerousHtml: true })
+                // .use(rehypeStringify, { allowDangerousHtml: true })
+                // .processSync(post.data.Excerpt) +
                 ' ' +
                 renderToString(
                   post.data.URL !== '#' && (
