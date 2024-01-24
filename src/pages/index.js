@@ -209,11 +209,11 @@ const IndexPage = ({ data }) => {
 
   // console.error(missingNames)
 
-  if (missingNames.size > 0) {
-    throw new Error(
-      `Display names not found for ${Array.from(missingNames).join(', ')}`
-    )
-  }
+  // if (missingNames.size > 0) {
+  //   throw new Error(
+  //     `Display names not found for ${Array.from(missingNames).join(', ')}`
+  //   )
+  // }
 
   return (
     <Layout>

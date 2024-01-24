@@ -31,28 +31,25 @@
   a {
     display: inline-block;
     margin-left: 1rem;
-    height: 5.5rem;
+    // height: 5.5rem;
+    height: 3rem;
     text-decoration: none;
     color: inherit;
+      margin-top: 1rem;
 
-    @media (min-width: 30rem) {
+    @media (min-width: 745px) {
       border-left: 1px solid #041e42;
     }
 
     img {
       height: 100%;
       padding-left: 1rem;
-      padding-top: 1rem;
+      max-width: 100%;
+      object-fit: contain; 
     }
 
     .georgetown {
       padding-top: 0;
-    }
-
-    p {
-      position: absolute;
-      font-size: 0.8rem;
-      width: 5em;
     }
   }
 

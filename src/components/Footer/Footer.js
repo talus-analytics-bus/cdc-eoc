@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className={styles.footer}>
     <a target="_blank" rel="noopener noreferrer" href="https://georgetown.edu/">
       <img
-        src="/img/georgetown-logo.png"
+        src="/img/GHSS logo.png"
         alt="Georgetown University Logo"
         className={styles.georgetown}
       />
@@ -16,8 +16,7 @@ const Footer = () => (
       rel="noopener noreferrer"
       href="http://talusanalytics.com//"
     >
-      <p>Built By</p>
-      <img src="/img/talus-logo.png" alt="Talus Analytics Logo" />
+      <img src="/img/IDEA_Logo.png" alt="Talus Analytics Logo" />
     </a>
   </footer>
 )
