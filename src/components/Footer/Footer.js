@@ -4,20 +4,15 @@ import * as styles from './Footer.module.scss'
 
 const Footer = () => (
   <footer className={styles.footer}>
-    <a target="_blank" rel="noopener noreferrer" href="https://georgetown.edu/">
+    <a target="_blank" href="https://georgetown.edu/">
       <img
-        src="/img/georgetown-logo.png"
+        src="/img/GHSS logo.png"
         alt="Georgetown University Logo"
         className={styles.georgetown}
       />
     </a>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="http://talusanalytics.com//"
-    >
-      <p>Built By</p>
-      <img src="/img/talus-logo.png" alt="Talus Analytics Logo" />
+    <a target="_blank" href="https://ghssidea.org/">
+      <img src="/img/IDEA_Logo.png" alt="Talus Analytics Logo" />
     </a>
   </footer>
 )
